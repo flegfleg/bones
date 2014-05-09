@@ -42,7 +42,9 @@ http://sachagreif.com/sass-color-variables/
 /*********************
 TYPOGRAPHY
 *********************/
-/* i imported this one in the functions file so bones would look sweet. don't forget to remove it for your site.
+/*
+ i imported this one in the functions file so bones would look sweet.
+ don't forget to remove it for your site.
 */
 /******************************************************************
 Site Name:
@@ -101,44 +103,67 @@ whatever you use in here.
 
 ******************************************************************/
 /******************************************************************
-Site Name: 
-Author: 
+Site Name:
+Author:
 
 Stylesheet: 481px and Up Stylesheet
 
-This stylesheet is loaded for larger devices. It's set to 
+This stylesheet is loaded for larger devices. It's set to
 481px because at 480px it would load on a landscaped iPhone.
 This isn't ideal because then you would be loading all those
-extra styles on that same mobile connection. 
+extra styles on that same mobile connection.
 
 A word of warning. This size COULD be a larger mobile device,
 so you still want to keep it pretty light and simply expand
 upon your base.scss styles.
 
 ******************************************************************/
+/*
+IMPORTANT NOTE ABOUT SASS 3.3 & UP
+You can't use @extend within media queries
+anymore, so just be aware that if you drop
+them in here, they won't work.
+*/
 /*********************
 NAVIGATION STYLES
 *********************/
 /* .menu is clearfixed inside mixins.scss */
-.menu { /* end .menu ul */ }
-.menu ul { /* end .menu ul li */ /* highlight current page */ /* end current highlighters */ }
-.menu ul li { /*
-plan your menus and drop-downs wisely.
-*/ }
-.menu ul li a { /*
-you can use hover styles here even though this size
-has the possibility of being a mobile device.
-*/ }
+.menu {
+  /* end .menu ul */ }
+  .menu ul {
+    /* end .menu ul li */
+    /* highlight current page */
+    /* end current highlighters */ }
+    .menu ul li {
+      /*
+      plan your menus and drop-downs wisely.
+      */ }
+      .menu ul li a {
+        /*
+        you can use hover styles here even though this size
+        has the possibility of being a mobile device.
+        */ }
 
 /* end .menu */
 /*********************
 POSTS & CONTENT STYLES
 *********************/
 /* entry content */
-.entry-content { /* at this larger size, we can start to align images */ }
-.entry-content .alignleft, .entry-content img.alignleft { margin-right: 1.5em; display: inline; float: left; }
-.entry-content .alignright, .entry-content img.alignright { margin-left: 1.5em; display: inline; float: right; }
-.entry-content .aligncenter, .entry-content img.aligncenter { margin-right: auto; margin-left: auto; display: block; clear: both; }
+.entry-content {
+  /* at this larger size, we can start to align images */ }
+  .entry-content .alignleft, .entry-content img.alignleft {
+    margin-right: 1.5em;
+    display: inline;
+    float: left; }
+  .entry-content .alignright, .entry-content img.alignright {
+    margin-left: 1.5em;
+    display: inline;
+    float: right; }
+  .entry-content .aligncenter, .entry-content img.aligncenter {
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    clear: both; }
 
 /* end .entry-content */
 /*********************
@@ -168,7 +193,8 @@ GENERAL STYLES
 /*********************
 LAYOUT & GRID STYLES
 *********************/
-.wrap { width: 760px; }
+.wrap {
+  width: 760px; }
 
 /*********************
 HEADER STYLES
@@ -176,36 +202,96 @@ HEADER STYLES
 /*********************
 NAVIGATION STYLES
 *********************/
-.nav { border: 0; /* end .menu ul li */ /* highlight current page */ /* end current highlighters */ }
-.nav li { float: left; position: relative; /*
-plan your menus and drop-downs wisely.
-*/ /* showing sub-menus */ }
-.nav li a { border-bottom: 0; /*
-you can use hover styles here even though this size
-has the possibility of being a mobile device.
-*/ }
-.nav li a:hover, .nav li a:focus { color: white; text-decoration: underline; }
-.nav li ul.sub-menu, .nav li ul.children { margin-top: 0; border: 1px solid #ccc; border-top: 0; position: absolute; display: none; z-index: 8999; /* highlight sub-menu current page */ }
-.nav li ul.sub-menu li, .nav li ul.children li { /*
-if you need to go deeper, go nuts
-just remember deeper menus suck
-for usability. k, bai.
-*/ }
-.nav li ul.sub-menu li a, .nav li ul.children li a { padding-left: 10px; border-right: 0; display: block; width: 180px; border-bottom: 1px solid #ccc; }
-.nav li ul.sub-menu li:last-child a, .nav li ul.children li:last-child a { border-bottom: 0; }
-.nav li:hover ul { top: auto; display: block; }
+/**************
+NAVIGATAUR MENU
+**************/
+#toggle, .toggle {
+  display: none; }
+
+#toggle:checked ~ .top-nav {
+  border-top: none; }
+
+.top-nav {
+  z-index: 2;
+  line-height: 40px;
+  /* rules below are necessary to navigataur, integrate in your .nav class */
+  opacity: 1;
+  height: auto;
+  overflow: visible;
+  margin-top: 2em;
+  /* end .menu ul li */
+  /* highlight current page */
+  /* end current highlighters */ }
+  .top-nav li {
+    float: left;
+    position: relative;
+    /*
+    plan your menus and drop-downs wisely.
+    */
+    /* showing sub-menus */ }
+    .top-nav li a {
+      border: 0;
+      height: 42px;
+      -webkit-transition: background 0.5s ease-in-out;
+      transition: background 0.5s ease-in-out;
+      padding: 2px 10px;
+      /*
+      you can use hover styles here even though this size
+      has the possibility of being a mobile device.
+      */ }
+      .top-nav li a:hover, .top-nav li a:focus {
+        background: #f7f8fa; }
+    .top-nav li ul.sub-menu,
+    .top-nav li ul.children {
+      margin-top: 0;
+      position: absolute;
+      overflow: hidden;
+      visibility: hidden;
+      z-index: 9001;
+      background: rgba(255, 255, 255, 0.8);
+      /* highlight sub-menu current page */ }
+      .top-nav li ul.sub-menu li,
+      .top-nav li ul.children li {
+        /*
+        if you need to go deeper, go nuts
+        just remember deeper menus suck
+        for usability. k, bai.
+        */ }
+        .top-nav li ul.sub-menu li a,
+        .top-nav li ul.children li a {
+          padding-left: 10px;
+          border-right: 0;
+          display: block;
+          min-width: 250px; }
+        .top-nav li ul.sub-menu li:last-child a,
+        .top-nav li ul.children li:last-child a {
+          border-bottom: 0; }
+    .top-nav li:hover ul {
+      top: auto;
+      overflow: visible;
+      visibility: visible;
+      display: block; }
 
 /* end .nav */
 /*********************
 SIDEBARS & ASIDES
 *********************/
-.sidebar { margin-top: 2.2em; }
+.sidebar {
+  margin-top: 2.2em; }
 
-.widgettitle { border-bottom: 2px solid #444; margin-bottom: 0.75em; }
+.widgettitle {
+  border-bottom: 2px solid #444;
+  margin-bottom: 0.75em; }
 
-.widget { padding: 0 10px; margin: 2.2em 0; }
-.widget ul li { margin-bottom: 0.75em; /* deep nesting */ }
-.widget ul li ul { margin-top: 0.75em; padding-left: 1em; }
+.widget {
+  padding: 0 10px;
+  margin: 2.2em 0; }
+  .widget ul li {
+    margin-bottom: 0.75em;
+    /* deep nesting */ }
+    .widget ul li ul {
+      margin-top: 0.75em;
+      padding-left: 1em; }
 
 /* links widget */
 /* meta widget */
@@ -226,11 +312,22 @@ you'll probably need to do quite a bit
 of overriding here if you styled them for
 mobile. Make sure to double check these!
 */
-.footer-links ul li { /*
-be careful with the depth of your menus.
-it's very rare to have multi-depth menus in
-the footer.
-*/ }
+p.copyright {
+  margin: 1em 0; }
+
+ul.footer-nav li {
+  float: left;
+  position: relative;
+  margin-right: 20px; }
+  ul.footer-nav li ul {
+    display: none; }
+
+.footer-links ul li {
+  /*
+  be careful with the depth of your menus.
+  it's very rare to have multi-depth menus in
+  the footer.
+  */ }
 
 /* end .footer-links */
 /******************************************************************
@@ -243,7 +340,8 @@ This is the desktop size. It's larger than an iPad so it will only
 be seen on the Desktop.
 
 ******************************************************************/
-.wrap { width: 1040px; }
+.wrap {
+  width: 1040px; }
 
 /*
 you can call the larger styles if you want, but there's really no need

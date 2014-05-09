@@ -45,31 +45,38 @@
 
 			<header class="header" role="banner">
 
-				<div id="inner-header" class="wrap cf">
+				<div id="inner-header" class="wrap cf frame">
 
 					<?php // to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> ?>
-					<p id="logo" class="h1"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></p>
-
+					<div class="bit-25">
+						<p id="logo" class="h1"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></p>
+					</div>
 					<?php // if you'd like to use the site description you can un-comment it below ?>
 					<?php // bloginfo('description'); ?>
 
+					<div class="bit-75">
+						<nav role="navigation">
 
-					<nav role="navigation">
-						<?php wp_nav_menu(array(
-    					'container' => false,                           // remove nav container
-    					'container_class' => 'menu cf',                 // class of container (should you choose to use it)
-    					'menu' => __( 'The Main Menu', 'bonestheme' ),  // nav name
-    					'menu_class' => 'nav top-nav cf',               // adding custom nav class
-    					'theme_location' => 'main-nav',                 // where it's located in the theme
-    					'before' => '',                                 // before the menu
-        			'after' => '',                                  // after the menu
-        			'link_before' => '',                            // before each link
-        			'link_after' => '',                             // after each link
-        			'depth' => 0,                                   // limit the depth of the nav
-    					'fallback_cb' => ''                             // fallback function (if there is one)
-						)); ?>
+						<!-- responsive nav -->
+						<input type="checkbox" id="toggle" />
+						<label for="toggle" class="toggle" onclick></label>
 
-					</nav>
+							<?php wp_nav_menu(array(
+	    					'container' => false,                           // remove nav container
+	    					'container_class' => 'menu cf',                 // class of container (should you choose to use it)
+	    					'menu' => __( 'The Main Menu', 'bonestheme' ),  // nav name
+	    					'menu_class' => 'nav top-nav cf',               // adding custom nav class
+	    					'theme_location' => 'main-nav',                 // where it's located in the theme
+	    					'before' => '',                                 // before the menu
+	        			'after' => '',                                  // after the menu
+	        			'link_before' => '',                            // before each link
+	        			'link_after' => '',                             // after each link
+	        			'depth' => 0,                                   // limit the depth of the nav
+	    					'fallback_cb' => ''                             // fallback function (if there is one)
+							)); ?>
+
+						</nav>
+					</div>
 
 				</div> <?php // end #inner-header ?>
 

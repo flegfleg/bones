@@ -16,9 +16,9 @@
 
 			<div id="content">
 
-				<div id="inner-content" class="wrap cf">
+				<div id="inner-content" class="wrap cf frame">
 
-						<div id="main" class="m-all t-2of3 d-5of7 cf" role="main">
+						<div id="main" class="bit-75" role="main">
 
 						<h1 class="archive-title h2"><?php post_type_archive_title(); ?></h1>
 

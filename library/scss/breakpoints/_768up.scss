@@ -39,96 +39,113 @@ HEADER STYLES
 NAVIGATION STYLES
 *********************/
 
-.nav {
-	border: 0;
 
-	li {
-		float: left;
-		position: relative;
+/**************
+NAVIGATAUR MENU
+**************/
 
-		a {
-			border-bottom: 0;
+#toggle, .toggle {display: none;}
 
-			/*
-			you can use hover styles here even though this size
-			has the possibility of being a mobile device.
-			*/
-			&:hover, &:focus {
-				color: $white;
-				text-decoration: underline;
+#toggle:checked ~ .top-nav {border-top:none;}
 
-			}
-		}
+.top-nav{
+        z-index:2;
+        line-height:40px;
+         /* rules below are necessary to navigataur, integrate in your .nav class */
+        opacity:1;
+        height:auto;
+        overflow:visible;
+        margin-top: 2em;
 
-		&:first-child {}
-		&:last-child {}
+    li {
+        float: left;
+        position: relative;
 
-		/*
-		plan your menus and drop-downs wisely.
-		*/
-		ul.sub-menu,
-		ul.children {
-			margin-top: 0;
-			border: 1px solid #ccc;
-			border-top: 0;
-			position: absolute;
-			display: none;
-			z-index: 8999;
+        a {
+            border: 0;
+            height:42px;
+            @include transition(background 0.5s ease-in-out);
+            padding: 2px 10px;
 
-			li {
+            /*
+            you can use hover styles here even though this size
+            has the possibility of being a mobile device.
+            */
+            &:hover, &:focus {
+                background:lighten($gray, 4%);
+            }
+        }
 
-				a {
-					padding-left: 10px;
-					border-right: 0;
-					display: block;
-					width: 180px;
-					border-bottom: 1px solid #ccc;
+        &:first-child {}
+        &:last-child {}
 
-					&:hover,
-					&:focus {}
+        /*
+        plan your menus and drop-downs wisely.
+        */
+        ul.sub-menu,
+        ul.children {
+            margin-top: 0;
+            position: absolute;
+            overflow: hidden;
+            visibility: hidden;
+            z-index: 9001; //using an high z-index in case menu children pops over an image slider
+            background:rgba(255,255,255,0.8);
 
-					&:link {}
-				}
+            li {
 
-				&:first-child {}
+                a {
+                    padding-left: 10px;
+                    border-right: 0;
+                    display: block;
+                    min-width: 250px;
 
-				&:last-child {
+                    &:hover,
+                    &:focus {}
 
-					a {
-						border-bottom: 0;
-					}
-				}
+                    &:link {}
+                }
 
-				/*
-				if you need to go deeper, go nuts
-				just remember deeper menus suck
-				for usability. k, bai.
-				*/
-				ul {}
-			}
+                &:first-child {}
 
-			/* highlight sub-menu current page */
-			li.current-menu-item,
-			li.current_page_item,
-			li.current-page-ancestor {
-				a {}
-			}
-		}
+                &:last-child {
 
-		/* showing sub-menus */
-		&:hover ul {
-			top: auto;
-			display: block;
-		}
+                    a {
+                        border-bottom: 0;
+                    }
+                }
 
-	} /* end .menu ul li */
+                /*
+                if you need to go deeper, go nuts
+                just remember deeper menus suck
+                for usability. k, bai.
+                */
+                ul {}
+            }
 
-	/* highlight current page */
-	li.current-menu-item,
-	li.current_page_item,
-	li.current-page-ancestor {
-		a {}
-	}  /* end current highlighters */
+            /* highlight sub-menu current page */
+            li.current-menu-item,
+            li.current_page_item,
+            li.current-page-ancestor {
+                a {}
+            }
+        }
+
+        /* showing sub-menus */
+        &:hover ul {
+            top: auto;
+            overflow: visible;
+            visibility:visible;
+            display: block;
+        }
+
+    } /* end .menu ul li */
+
+    /* highlight current page */
+    li.current-menu-item,
+    li.current_page_item,
+    li.current-page-ancestor {
+        a {}
+    }  /* end current highlighters */
 
 } /* end .nav */
 
@@ -264,6 +281,20 @@ you'll probably need to do quite a bit
 of overriding here if you styled them for
 mobile. Make sure to double check these!
 */
+
+p.copyright {
+	margin: 1em 0;
+}
+
+ul.footer-nav {
+			li {
+	        float: left;
+        position: relative;
+        margin-right: 20px;
+        ul { display:none;}
+      }
+}
+
 .footer-links {
 	ul {
 		li {

@@ -2,6 +2,12 @@
 
 				<div id="inner-footer" class="wrap cf">
 
+				<div class="bit-25">
+					<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>.</p>
+				</div>
+
+
+				<div class="bit-75">
 					<nav role="navigation">
 						<?php wp_nav_menu(array(
     					'container' => '',                              // remove nav container
@@ -17,8 +23,7 @@
     					'fallback_cb' => 'bones_footer_links_fallback'  // fallback function
 						)); ?>
 					</nav>
-
-					<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>.</p>
+					</div>
 
 				</div> <?php // end #inner-footer ?>
 
