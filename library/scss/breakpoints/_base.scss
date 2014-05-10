@@ -73,6 +73,21 @@ LAYOUT & GRID STYLES
 	margin: 0 auto;
 }
 
+/********************* 
+LEMONADE Grid
+*********************/
+
+	.bit-25 {width:100%}
+	.bit-75 {width:100%}
+
+.cascade {
+	.bit-25 {width:100%}
+	.bit-75 {width:100%}
+}
+
+
+
+
 /*********************
 LINK STYLES
 *********************/
@@ -155,8 +170,8 @@ HEADER STYLES
 }
 
 	#logo {
-		margin: 0.75em 0;
-
+		margin: 0;
+		font-size: 1.5em;
 		a {
 			color: $white;
 		}
@@ -178,122 +193,13 @@ and more scalable.
 NAVIGATAUR MENU
 *****************/
 
-#toggle {display: none;}
+/* embedded */
 
-.toggle {
-        z-index: 3;
-        display: block;
-        position: relative;
-        cursor: pointer;
-        -webkit-touch-callout: none;
-        -webkit-user-select: none;
-        user-select: none;
-
-        &:after {
-            content: '\25BC';
-            display: block;
-            padding: 8px 20px;
-            background: $blue;
-            text-align: center;
-            color: $white;
-            right:0;
-            bottom:0;
-            position:absolute;
-            @include transition(background 0.5s linear);
-        }
-
-        &:hover:after {
-            background: darken($blue,20%);
-        }
-    }
-
-#toggle:checked + .toggle:after {content: '\25b2';}
-
-#toggle:checked ~ .top-nav {
-    display: block;
-    opacity: 1;
-    @include transition(all 0.5s ease-in-out);
-    max-height:900px; //if some menu items are cut out, increase this value
-    border-top: 1px solid $blue;
-} 
-
-.top-nav{
-    margin:0;
-    @include transition(all 0.9s ease-in-out);
-     /* rules below are necessary to navigataur, integrate in your .nav class */
-    opacity: 0;
-    max-height:0px;
-    overflow:hidden;
-
-
-    li {
-
-        a {
-            display: block;
-            text-decoration: none;
-            padding: 5px 10px;
-            border-bottom: 1px solid $blue;
-            color: $blue;
-
-            /*
-            remember this is for mobile ONLY, so there's no need
-            to even declare hover styles here, you can do it in
-            the style.scss file where it's relevant. We want to
-            keep this file as small as possible!
-            */
-            &:hover, &:focus {
-                background-color: $gray;
-                color:$blue;
-            }
-        }
-
-        &:first-child {}
-
-        &:last-child {}
-
-        /*
-        so you really have to rethink your dropdowns for mobile.
-        you don't want to have it expand too much because the
-        screen is so small. How you manage your menu should
-        depend on the project. Here's some great info on it:
-        http://www.alistapart.com/articles/organizing-mobile/
-        */
-        ul.sub-menu,
-        ul.children {
-            margin:0;
-            li {
-
-                a {
-                    padding-left: 30px;
-
-                    &:hover,
-                    &:focus {
-
-                    }
-
-                    &:link {}
-
-                }
-
-                &:first-child {}
-
-                &:last-child {}
-
-            }
-
-        }
-
-    } /* end .menu li */
-
-    /* highlight current page */
-    li.current-menu-item,
-    li.current_page_item,
-    li.current-page-ancestor {
-
-        a {}
-
-    }  /* end current highlighters */
-}
+/* Tim Pietrusky advanced checkbox hack (Android <= 4.1.2, Chrome <=13, Safari <=5.1) */
+body{ 
+-webkit-animation: bugfix infinite 1s;
+ }
+@-webkit-keyframes bugfix { from {padding:0;} to {padding:0;} }
 
 /*********************
 POSTS & CONTENT STYLES
@@ -914,6 +820,11 @@ FOOTER STYLES
 	color: $light-gray;
 }
 
+.footer nav {
+	display:none;
+	/* hide footer nav on mobile */
+}
+
 	/*
 	if you checked out the link above:
 	http://www.alistapart.com/articles/organizing-mobile/
@@ -924,7 +835,6 @@ FOOTER STYLES
 	view.
 	*/
 	.footer-links {
-
 		ul {
 
 			li {}

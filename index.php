@@ -1,8 +1,8 @@
 <?php get_header(); ?>
-INDEX
+
 			<div id="content" class="wrap">
 
-				<div id="inner-content" class="frame">
+				<div id="inner-content" class="frame cascade">
 
 						<div id="main" class="bit-75" role="main">
 

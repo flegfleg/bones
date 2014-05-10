@@ -41,27 +41,7 @@
   clear: both
 }
 
-/* Full */
-.bit-25 {width:25%}
-.bit-75 {width:75%}
 
-/* Landscape mobile & down */
-@media (max-width: 30em) {
-  .bit-75, .bit-25 {
-    width: 100%;
-  }
-}
 
-/* Portrait tablet to landscape */
-@media (min-width: 30em) and (max-width: 50em) {
-  .bit-75, .bit-25 {
-    width: 100%;
-  }
-}
 
-/* Landscape to small desktop */
-@media (min-width: 50em) and (max-width: 68.750em) {
-  .bit-75, .bit-25 {
-    width: 100%;
-  }
-}
+

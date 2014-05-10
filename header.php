@@ -57,7 +57,7 @@
 					<div class="bit-75">
 						<nav role="navigation">
 
-						<!-- responsive nav -->
+						<!-- responsive nav: navigataur -->
 						<input type="checkbox" id="toggle" />
 						<label for="toggle" class="toggle" onclick></label>
 
