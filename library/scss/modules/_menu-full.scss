@@ -1,10 +1,5 @@
-/*********************
-NAVIGATION STYLES
-*********************/
-
-
 /**************
-NAVIGATAUR MENU
+NAVIGATAUR MENU - full width
 **************/
 
 #toggle, .toggle {display: none;}
@@ -21,7 +16,7 @@ NAVIGATAUR MENU
         margin-top: 2em; /* adjust to keep text aligned to Logo */
 
     li {
-        float: left;
+        float: right; /* adjust alignment */
         position: relative;
 
         a {

@@ -1251,6 +1251,7 @@ HEADER STYLES
 
 #logo {
   margin: 0;
+  padding: 0;
   font-size: 1.5em; }
   #logo a {
     color: white; }
@@ -1627,6 +1628,9 @@ override these styles for the desktop
 view.
 */
 /* end .footer-links */
+/**************
+NAVIGATAUR MENU - condensed
+**************/
 #toggle {
   display: none; }
 
@@ -1638,7 +1642,9 @@ view.
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   user-select: none;
-  color: white; }
+  color: white;
+  margin-top: -3px;
+  /* adjust depending on your font */ }
   .toggle:after {
     content: '\2630';
     display: block;
@@ -1795,11 +1801,8 @@ tweeners.
     display: block; }
 
   /* end .footer-links */
-  /*********************
-  NAVIGATION STYLES
-  *********************/
   /**************
-  NAVIGATAUR MENU
+  NAVIGATAUR MENU - full width
   **************/
   #toggle, .toggle {
     display: none; }
@@ -1820,7 +1823,8 @@ tweeners.
     /* highlight current page */
     /* end current highlighters */ }
     .top-nav li {
-      float: left;
+      float: right;
+      /* adjust alignment */
       position: relative;
       /*
       plan your menus and drop-downs wisely.
