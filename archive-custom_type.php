@@ -18,7 +18,7 @@
 
 				<div id="inner-content" class="wrap cf frame">
 
-						<div id="main" class="bit-75" role="main">
+					<main id="main" class="bit-75" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
 						<h1 class="archive-title h2"><?php post_type_archive_title(); ?></h1>
 
@@ -67,7 +67,7 @@
 
 							<?php endif; ?>
 
-						</div> <?php // end #main ?>
+						</main> <?php // end #main ?>
 
 						<?php get_sidebar(); ?>
 
