@@ -1,0 +1,108 @@
+/**************
+NAVIGATAUR MENU - full width
+**************/
+
+#toggle, .toggle {display: none;}
+
+#toggle:checked ~ .top-nav {border-top:none;}
+
+.top-nav{
+        z-index:2;
+        line-height:40px;
+         /* rules below are necessary to navigataur, integrate in your .nav class */
+        opacity:1;
+        height:auto;
+        overflow:visible;
+        margin-top: 2em; /* adjust to keep text aligned to Logo */
+
+    li {
+        float: right; /* adjust alignment */
+        position: relative;
+
+        a {
+            border: 0;
+            height:42px;
+            @include transition(background 0.5s ease-in-out);
+            padding: 2px 10px;
+
+            /*
+            you can use hover styles here even though this size
+            has the possibility of being a mobile device.
+            */
+            &:hover, &:focus {
+                background:lighten($gray, 4%);
+            }
+        }
+
+        &:first-child {}
+        &:last-child {}
+
+        /*
+        plan your menus and drop-downs wisely.
+        */
+        ul.sub-menu,
+        ul.children {
+            margin-top: 0;
+            position: absolute;
+            overflow: hidden;
+            visibility: hidden;
+            z-index: 9001; //using an high z-index in case menu children pops over an image slider
+            background:rgba(255,255,255,0.8);
+
+            li {
+
+                a {
+                    padding-left: 10px;
+                    border-right: 0;
+                    display: block;
+                    min-width: 250px;
+
+                    &:hover,
+                    &:focus {}
+
+                    &:link {}
+                }
+
+                &:first-child {}
+
+                &:last-child {
+
+                    a {
+                        border-bottom: 0;
+                    }
+                }
+
+                /*
+                if you need to go deeper, go nuts
+                just remember deeper menus suck
+                for usability. k, bai.
+                */
+                ul {}
+            }
+
+            /* highlight sub-menu current page */
+            li.current-menu-item,
+            li.current_page_item,
+            li.current-page-ancestor {
+                a {}
+            }
+        }
+
+        /* showing sub-menus */
+        &:hover ul {
+            top: auto;
+            overflow: visible;
+            visibility:visible;
+            display: block;
+        }
+
+    } /* end .menu ul li */
+
+    /* highlight current page */
+    li.current-menu-item,
+    li.current_page_item,
+    li.current-page-ancestor {
+        a {}
+    }  /* end current highlighters */
+
+} /* end .nav */

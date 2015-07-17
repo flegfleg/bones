@@ -68,6 +68,11 @@ the other stylesheets. Remember, keep it light: Speed is Important.
 // styles in base.scss
 @import "breakpoints/base";
 
+
+// import navigateur menu only on mobile 
+@import "modules/menu-mobile";
+
+
 /*********************
 LARGER MOBILE DEVICES
 This is for devices like the Galaxy Note or something that's
@@ -78,6 +83,7 @@ tweeners.
 
 	// styles in 481up.scss
 	@import "breakpoints/481up";
+	@import "modules/menu-full";
 
 } // end of media query
 

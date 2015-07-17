@@ -16,9 +16,9 @@
 
 			<div id="content">
 
-				<div id="inner-content" class="wrap cf">
+				<div id="inner-content" class="wrap cf frame">
 
-					<main id="main" class="m-all t-2of3 d-5of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+						<div id="main" class="bit-75" role="main">
 
 						<h1 class="archive-title h2"><?php post_type_archive_title(); ?></h1>
 
@@ -30,22 +30,22 @@
 
 									<h3 class="h2"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 									<p class="byline vcard"><?php
-										printf( __( 'Posted <time class="updated" datetime="%1$s" itemprop="datePublished">%2$s</time> by <span class="author">%3$s</span>', 'bonestheme' ), get_the_time( 'Y-m-j' ), get_the_time( __( 'F jS, Y', 'bonestheme' ) ), get_author_posts_url( get_the_author_meta( 'ID' ) ));
+										printf( __( 'Posted <time class="updated" datetime="%1$s" pubdate>%2$s</time> by <span class="author">%3$s</span>.', 'bonestheme' ), get_the_time( 'Y-m-j' ), get_the_time( __( 'F jS, Y', 'bonestheme' ) ), get_author_posts_url( get_the_author_meta( 'ID' ) ));
 									?></p>
 
-								</header>
+								</header> <?php // end article header ?>
 
 								<section class="entry-content cf">
 
 									<?php the_excerpt(); ?>
 
-								</section>
+								</section> <?php // end article section ?>
 
 								<footer class="article-footer">
 
-								</footer>
+								</footer> <?php // end article footer ?>
 
-							</article>
+							</article> <?php // end article ?>
 
 							<?php endwhile; ?>
 
@@ -67,12 +67,12 @@
 
 							<?php endif; ?>
 
-						</main>
+						</div> <?php // end #main ?>
 
-					<?php get_sidebar(); ?>
+						<?php get_sidebar(); ?>
 
-				</div>
+								</div> <?php // end #inner-content ?>
 
-			</div>
+			</div> <?php // end #content ?>
 
 <?php get_footer(); ?>
