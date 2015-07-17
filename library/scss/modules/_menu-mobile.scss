@@ -13,13 +13,14 @@ NAVIGATAUR MENU - condensed
         -webkit-user-select: none;
         user-select: none;
         color: $white;
-        margin-top: -3px; /* adjust depending on your font */
+        margin-top: -30px; /* adjust depending on your font */
 
         &:after {
-            content: '\2630';
+            content: "\2261";
             display: block;
-            padding: 8px 20px;
+            padding: 8px 20px; // adjust to symbol
             text-align: center;
+            font-size: 2em;
             right:0;
             bottom:0;
             position:absolute;
@@ -31,7 +32,7 @@ NAVIGATAUR MENU - condensed
         }
     }
 
-#toggle:checked + .toggle:after {content: '\2630';}
+#toggle:checked + .toggle:after {}
 
 #toggle:checked ~ .top-nav {
     display: block;
@@ -56,7 +57,7 @@ NAVIGATAUR MENU - condensed
             display: block;
             text-decoration: none;
             padding: 5px 10px;
-            border-bottom: 1px solid $blue;
+            border-top: 1px solid  $gray;
 
             /*
             remember this is for mobile ONLY, so there's no need
