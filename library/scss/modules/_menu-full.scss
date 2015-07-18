@@ -31,7 +31,9 @@ NAVIGATAUR MENU - full width
             */
             &:hover, &:focus {
                 background:lighten($gray, 4%);
-            }
+                color: $text-color !important;
+                text-decoration: none;
+                }
         }
 
         &:first-child {}
