@@ -54,6 +54,7 @@ textarea,
   font-family: $lato;
   background-color: $gray;
   @include transition(background-color 0.24s ease-in-out);
+  border-bottom: 1px solid $text-color;
 
   // a focused input (or hovered on)
   &:focus,
