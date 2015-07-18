@@ -146,7 +146,6 @@ SIDEBARS & ASIDES
 }
 
 	.widgettitle {
-		border-bottom: 2px solid #444;
 		margin-bottom: 0.75em;
 	}
 
@@ -251,7 +250,9 @@ SIDEBARS & ASIDES
 
 	/* search widget */
 	#searchform {}
-	.widget_search {}
+	.widget_search {
+		input { width: 90%; }
+	}
 	.screen-reader-text {}
 
 	/* text widget */
