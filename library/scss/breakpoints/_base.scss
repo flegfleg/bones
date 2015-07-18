@@ -845,6 +845,10 @@ SIDEBARS & ASIDES
 
 		}
 
+	#searchsubmit {
+		@extend .blue-btn;
+	}
+
 	}
 
 	.no-widgets {
