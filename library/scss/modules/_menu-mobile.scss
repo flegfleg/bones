@@ -16,7 +16,8 @@ NAVIGATAUR MENU - condensed
         margin-top: -30px; /* adjust depending on your font */
 
         &:after {
-            content: "\2261";
+            font-family: "FontAwesome";
+            content: "\f039"; // hamburger symbol
             display: block;
             padding: 8px 20px; // adjust to symbol
             text-align: center;
@@ -29,17 +30,21 @@ NAVIGATAUR MENU - condensed
 
         &:hover:after {
             background: darken($blue,20%);
+
         }
     }
 
-#toggle:checked + .toggle:after {}
+#toggle:checked + .toggle:after {
+    font-family: "FontAwesome";
+    content: "\f00d"; // close symbol
+}
+
 
 #toggle:checked ~ .top-nav {
     display: block;
     opacity: 1;
     @include transition(all 0.5s ease-in-out);
     max-height:900px; //if some menu items are cut out, increase this value
-    border-top: 1px solid $blue;
 } 
 
 .top-nav{
