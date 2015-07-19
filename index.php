@@ -2,9 +2,10 @@
 
 			<div id="content">
 
-				<div id="inner-content" class="wrap cf">
 
-						<main id="main" class="bit-75" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+				<div id="inner-content" class="wrap cf frame">
+						
+						<main id="main" class="bit-2" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 

@@ -7,7 +7,7 @@
 				</div>
 
 
-				<div class="bit-75">
+				<div class="bit-2">
 					<nav role="navigation">
 						<?php wp_nav_menu(array(
     					'container' => 'div',                           // enter '' to remove nav container (just make sure .footer-links in _base.scss isn't wrapping)
