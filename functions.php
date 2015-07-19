@@ -27,7 +27,10 @@ function bones_ahoy() {
   // let's get language support going, if you need it
   load_theme_textdomain( 'bonestheme', get_template_directory() . '/library/translation' );
 
-  // USE THIS TEMPLATE TO CREATE CUSTOM POST TYPES EASILY
+  // HELPER FUNCTIONS
+  require_once( 'library/flegfleg-helpers.php' );    
+
+  // CUSTOM POST TEMPLATE
   require_once( 'library/custom-post-type.php' );  
 
   // CUSTOM METABOXES AND FIELDS - Setup
