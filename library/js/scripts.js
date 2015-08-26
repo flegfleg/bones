@@ -17,10 +17,12 @@
 
 jQuery(document).ready(function($) {
 
-  /*
-   * Let's fire off the gravatar function
-   * You can remove this if you don't need it
-  */
+  // add lightbox to wordpress galleries
+  $('.gallery-icon').magnificPopup({
+    delegate: 'a', // child items selector, by clicking on it popup will open
+    type: 'image',
+    gallery:{enabled:true}
+});
 
 
 }); /* end of as page load scripts */
