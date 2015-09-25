@@ -13,6 +13,7 @@
  *
  * render_subnav
  * render_parent_title
+ * render_all_thumbs
  *
  */ 
 
@@ -35,9 +36,7 @@ function get_featured_img() {
     // get thumbnail
     $pic = wp_get_attachment_image_src( get_post_thumbnail_id( $page_id ),  'full');
   } else {
-<<<<<<< HEAD
     $pic = wp_get_attachment_image_src( get_post_thumbnail_id( $frontpage_id ), 'full'); // home page pic as fallback
-=======
     $pic = wp_get_attachment_image_src( get_post_thumbnail_id( $frontpage_id ), $size); // home page pic as fallback
   }
   return 'style="background-image: url('.$pic[0].'); background-size: cover"';
@@ -63,8 +62,7 @@ function get_current_page_depth(){
  
   return $depth;
 }
-
-/**
+ /**
  * Return the parent id or current page id if no parent  
  *
  * @return int
@@ -78,12 +76,9 @@ function get_parent_id ( ) {
     $id = $ancestors[0];
   } else { // no parent pages 
     $id = $current;
->>>>>>> 8876b36... added / formatted standard helpers
   }
   return $pic[0];
 }
-<<<<<<< HEAD
-=======
 /**
  * Sub Page navigation  
  *
@@ -109,7 +104,30 @@ function render_parent_title( ) {
   return get_the_title($id);
 
 }
+/**
+ * Return all attached thumbs  
+ *
+ * @return html
+ */
+function render_all_thumbs() {
+    global $post;
+    $attachments = get_posts( array(
+      'post_type' => 'attachment',
+      'posts_per_page' => -1,
+      'post_parent' => $post->ID
+    ) );
 
->>>>>>> 8876b36... added / formatted standard helpers
-
+    if ( $attachments ) {
+      echo ('<ul class="sidebar-gallery">');
+      foreach ( $attachments as $attachment ) {
+        $class = "post-attachment mime-" . sanitize_title( $attachment->post_mime_type );
+        // $thumbimg = wp_get_attachment_link( $attachment->ID, 'bones-thumb-sidebar', false );
+        $url = wp_get_attachment_url ($attachment->ID);
+        $img = wp_get_attachment_image_src ($attachment->ID, 'bones-thumb-sidebar' );
+        echo '<li class="' . $class . ' gallery-icon"><a href="' . $url .'"><img src="'. $img[0] . '"></a</li>';
+      }
+      echo ("</ul>");
+      
+    }
+  }
 ?>
