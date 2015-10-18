@@ -34,7 +34,10 @@ function bones_ahoy() {
   require_once( 'library/custom-post-type.php' );  
 
   // CUSTOM METABOXES AND FIELDS - Setup
-  require_once( 'library/custom-meta-boxes.php' );
+  require_once( 'library/custom-meta-boxes.php' );  
+
+  // CUSTOM METABOXES ADMIN COLUMNS
+  require_once( 'library/custom-meta-columns.php' );
 
   // launching operation cleanup
   add_action( 'init', 'bones_head_cleanup' );
