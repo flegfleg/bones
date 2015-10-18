@@ -21,161 +21,421 @@ our mixins, functions, and variables that we'll be using across
 the whole project.
 *********************/
 /* normalize.css 2012-07-07T09:50 UTC - http://github.com/necolas/normalize.css */
-/* ========================================================================== HTML5 display definitions ========================================================================== */
-/** Correct `block` display not defined in IE 8/9. */
-article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary { display: block; }
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined in IE 8/9.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block; }
 
-/** Correct `inline-block` display not defined in IE 8/9. */
-audio, canvas, video { display: inline-block; }
+/**
+ * Correct `inline-block` display not defined in IE 8/9.
+ */
+audio,
+canvas,
+video {
+  display: inline-block; }
 
-/** Prevent modern browsers from displaying `audio` without controls. Remove excess height in iOS 5 devices. */
-audio:not([controls]) { display: none; height: 0; }
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
 
-/** Address `[hidden]` styling not present in IE 8/9. Hide the `template` element in IE, Safari, and Firefox < 22. */
-[hidden], template { display: none; }
+/**
+ * Address `[hidden]` styling not present in IE 8/9.
+ * Hide the `template` element in IE, Safari, and Firefox < 22.
+ */
+[hidden],
+template {
+  display: none; }
 
-/* ========================================================================== Base ========================================================================== */
-/** 1. Set default font family to sans-serif. 2. Prevent iOS text size adjust after orientation change, without disabling user zoom. */
-html { font-family: sans-serif; /* 1 */ -ms-text-size-adjust: 100%; /* 2 */ -webkit-text-size-adjust: 100%; /* 2 */ }
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
 
-/** Remove default margin. */
-body { margin: 0; }
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0; }
 
-/* ========================================================================== Links ========================================================================== */
-/** Remove the gray background color from active links in IE 10. */
-a { background: transparent; }
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background: transparent; }
 
-/** Address `outline` inconsistency between Chrome and other browsers. */
-a:focus { outline: thin dotted; }
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+a:focus {
+  outline: thin dotted; }
 
-/** Improve readability when focused and also mouse hovered in all browsers. */
-a:active, a:hover { outline: 0; }
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0; }
 
-/* ========================================================================== Typography ========================================================================== */
-/** Address variable `h1` font-size and margin within `section` and `article` contexts in Firefox 4+, Safari 5, and Chrome. */
-h1 { font-size: 2em; margin: 0.67em 0; }
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari 5, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
 
-/** Address styling not present in IE 8/9, Safari 5, and Chrome. */
-abbr[title] { border-bottom: 1px dotted; }
+/**
+ * Address styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted; }
 
-/** Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome. */
-b, strong, .strong { font-weight: bold; }
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+b,
+strong,
+.strong {
+  font-weight: bold; }
 
-/** Address styling not present in Safari 5 and Chrome. */
-dfn, em, .em { font-style: italic; }
+/**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+dfn,
+em,
+.em {
+  font-style: italic; }
 
-/** Address differences between Firefox and other browsers. */
-hr { -moz-box-sizing: content-box; box-sizing: content-box; height: 0; }
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0; }
 
-/* proper formatting (http://blog.fontdeck.com/post/9037028497/hyphens)
+/*
+ * proper formatting (http://blog.fontdeck.com/post/9037028497/hyphens)
 */
-p { -webkit-hyphens: auto; -epub-hyphens: auto; -moz-hyphens: auto; hyphens: auto; }
+p {
+  -webkit-hyphens: auto;
+  -epub-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto; }
 
-/* Addresses margins set differently in IE6/7. */
-pre { margin: 0; }
+/*
+ * Addresses margins set differently in IE6/7.
+ */
+pre {
+  margin: 0; }
 
-/** Correct font family set oddly in Safari 5 and Chrome. */
-code, kbd, pre, samp { font-family: monospace, serif; font-size: 1em; }
+/**
+ * Correct font family set oddly in Safari 5 and Chrome.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em; }
 
-/** Improve readability of pre-formatted text in all browsers. */
-pre { white-space: pre-wrap; }
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+pre {
+  white-space: pre-wrap; }
 
-/** Set consistent quote types. */
-q { quotes: "\201C" "\201D" "\2018" "\2019"; }
+/**
+ * Set consistent quote types.
+ */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019"; }
 
-/** Address inconsistent and variable font size in all browsers. */
-q:before, q:after { content: ''; content: none; }
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+q:before,
+q:after {
+  content: '';
+  content: none; }
 
-small, .small { font-size: 75%; }
+small, .small {
+  font-size: 75%; }
 
-/** Prevent `sub` and `sup` affecting `line-height` in all browsers. */
-sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
 
-sup { top: -0.5em; }
+sup {
+  top: -0.5em; }
 
-sub { bottom: -0.25em; }
+sub {
+  bottom: -0.25em; }
 
-/* ========================================================================== Lists
+/* ==========================================================================
+  Lists
 ========================================================================== */
-/* Addresses margins set differently in IE6/7. */
-dl, menu, ol, ul { margin: 1em 0; }
+/*
+ * Addresses margins set differently in IE6/7.
+ */
+dl,
+menu,
+ol,
+ul {
+  margin: 1em 0; }
 
-dd { margin: 0; }
+dd {
+  margin: 0; }
 
-/* Addresses paddings set differently in IE6/7. */
-menu { padding: 0 0 0 40px; }
+/*
+ * Addresses paddings set differently in IE6/7.
+ */
+menu {
+  padding: 0 0 0 40px; }
 
-ol, ul { padding: 0; list-style-type: none; }
+ol,
+ul {
+  padding: 0;
+  list-style-type: none; }
 
-/* Corrects list images handled incorrectly in IE7. */
-nav ul, nav ol { list-style: none; list-style-image: none; }
+/*
+ * Corrects list images handled incorrectly in IE7.
+ */
+nav ul,
+nav ol {
+  list-style: none;
+  list-style-image: none; }
 
-/* ========================================================================== Embedded content
+/* ==========================================================================
+  Embedded content
 ========================================================================== */
-/** Remove border when inside `a` element in IE 8/9. */
-img { border: 0; }
+/**
+ * Remove border when inside `a` element in IE 8/9.
+ */
+img {
+  border: 0; }
 
-/** Correct overflow displayed oddly in IE 9. */
-svg:not(:root) { overflow: hidden; }
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
+svg:not(:root) {
+  overflow: hidden; }
 
-/* ========================================================================== Figures ========================================================================== */
-/** Address margin not present in IE 8/9 and Safari 5. */
-figure { margin: 0; }
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari 5.
+ */
+figure {
+  margin: 0; }
 
-/* ========================================================================== Forms ========================================================================== */
-/** Define consistent border, margin, and padding. */
-fieldset { border: 1px solid #c0c0c0; margin: 0 2px; padding: 0.35em 0.625em 0.75em; }
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
 
-/** 1. Correct `color` not being inherited in IE 8/9. 2. Remove padding so people aren't caught out if they zero out fieldsets. */
-legend { border: 0; /* 1 */ padding: 0; /* 2 */ }
+/**
+ * 1. Correct `color` not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
 
-/** 1. Correct font family not being inherited in all browsers. 2. Correct font size not being inherited in all browsers. 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome. */
-button, input, select, textarea { font-family: inherit; /* 1 */ font-size: 100%; /* 2 */ margin: 0; /* 3 */ }
+/**
+ * 1. Correct font family not being inherited in all browsers.
+ * 2. Correct font size not being inherited in all browsers.
+ * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 2 */
+  margin: 0;
+  /* 3 */ }
 
-/** Address Firefox 4+ setting `line-height` on `input` using `!important` in the UA stylesheet. */
-button, input { line-height: normal; }
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+button,
+input {
+  line-height: normal; }
 
-/** Address inconsistent `text-transform` inheritance for `button` and `select`. All other form control elements do not inherit `text-transform` values. Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+. Correct `select` style inheritance in Firefox 4+ and Opera. */
-button, select { text-transform: none; }
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+button,
+select {
+  text-transform: none; }
 
-/** 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio` and `video` controls. 2. Correct inability to style clickable `input` types in iOS. 3. Improve usability and consistency of cursor style between image-type `input` and others. */
-button, html input[type="button"], input[type="reset"], input[type="submit"] { -webkit-appearance: button; /* 2 */ cursor: pointer; /* 3 */ }
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */ }
 
-/** Re-set default cursor for disabled elements. */
-button[disabled], html input[disabled] { cursor: default; }
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default; }
 
-/** 1. Address box sizing set to `content-box` in IE 8/9/10. 2. Remove excess padding in IE 8/9/10. */
-input[type="checkbox"], input[type="radio"] { box-sizing: border-box; /* 1 */ padding: 0; /* 2 */ }
+/**
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
 
-/** 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome. 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome (include `-moz` to future-proof). */
-input[type="search"] { -webkit-appearance: textfield; /* 1 */ -moz-box-sizing: content-box; -webkit-box-sizing: content-box; /* 2 */ box-sizing: content-box; }
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box; }
 
-/** Remove inner padding and search cancel button in Safari 5 and Chrome on OS X. */
-input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
 
-/** Remove inner padding and border in Firefox 4+. */
-button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
 
-/** 1. Remove default vertical scrollbar in IE 8/9. 2. Improve readability and alignment in all browsers. */
-textarea { overflow: auto; /* 1 */ vertical-align: top; /* 2 */ }
+/**
+ * 1. Remove default vertical scrollbar in IE 8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */ }
 
-/* ========================================================================== Tables ========================================================================== */
-/** Remove most spacing between table cells. */
-table { border-collapse: collapse; border-spacing: 0; }
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
 
-* { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
 
-.image-replacement, .ir { text-indent: 100%; white-space: nowrap; overflow: hidden; }
+.image-replacement,
+.ir {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden; }
 
-.clearfix, .cf, .comment-respond { zoom: 1; }
-.clearfix:before, .clearfix:after, .cf:before, .comment-respond:before, .cf:after, .comment-respond:after { content: ""; display: table; }
-.clearfix:after, .cf:after, .comment-respond:after { clear: both; }
+.clearfix, .cf, .comment-respond {
+  zoom: 1; }
+  .clearfix:before, .clearfix:after, .cf:before, .comment-respond:before, .cf:after, .comment-respond:after {
+    content: "";
+    display: table; }
+  .clearfix:after, .cf:after, .comment-respond:after {
+    clear: both; }
 
 /*
 use the best ampersand
 http://simplebits.com/notebook/2008/08/14/ampersands-2/
 */
-span.amp { font-family: Baskerville,'Goudy Old Style',Palatino,'Book Antiqua',serif !important; font-style: italic; }
+span.amp {
+  font-family: Baskerville,'Goudy Old Style',Palatino,'Book Antiqua',serif !important;
+  font-style: italic; }
 
 /******************************************************************
 Site Name:
@@ -196,14 +456,7 @@ http://0to255.com/
 *********************/
 /*********************
 PADDING/MARGIN
-Need help w/ choosing your colors? Try this site out:
-http://0to255.com/
 *********************/
-/*
-Here's a great tutorial on how to
-use color variables properly:
-http://sachagreif.com/sass-color-variables/
-*/
 /******************************************************************
 Site Name:
 Author:
@@ -223,22 +476,52 @@ http://alistapart.com/column/responsive-typography-is-a-physical-discipline
 /*********************
 FONT FACE (IN YOUR FACE)
 *********************/
-/*  To embed your own fonts, use this syntax and place your fonts inside the library/fonts folder. For more information on embedding fonts, go to: http://www.fontsquirrel.com/ Be sure to remove the comment brackets.
+/*  To embed your own fonts, use this syntax
+  and place your fonts inside the
+  library/fonts folder. For more information
+  on embedding fonts, go to:
+  http://www.fontsquirrel.com/
+  Be sure to remove the comment brackets.
 */
-/*  @font-face { font-family: 'Font Name'; src: url('library/fonts/font-name.eot'); src: url('library/fonts/font-name.eot?#iefix') format('embedded-opentype'), url('library/fonts/font-name.woff') format('woff'), url('library/fonts/font-name.ttf') format('truetype'), url('library/fonts/font-name.svg#font-name') format('svg'); font-weight: normal; font-style: normal; }
+/*  @font-face {
+      font-family: 'Font Name';
+      src: url('library/fonts/font-name.eot');
+      src: url('library/fonts/font-name.eot?#iefix') format('embedded-opentype'),
+             url('library/fonts/font-name.woff') format('woff'),
+             url('library/fonts/font-name.ttf') format('truetype'),
+             url('library/fonts/font-name.svg#font-name') format('svg');
+      font-weight: normal;
+      font-style: normal;
+  }
 */
 /*
 The following is based of Typebase:
 https://github.com/devinhunt/typebase.css
 I've edited it a bit, but it's a nice starting point.
 */
-/* i imported this one in the functions file so bones would look sweet. don't forget to remove it for your site.
+/*
+ i imported this one in the functions file so bones would look sweet.
+ don't forget to remove it for your site.
 */
 /*
 some nice typographical defaults
 more here: http://www.newnet-soft.com/blog/csstypography
 */
-p { -ms-word-wrap: break-word; word-break: break-word; word-wrap: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; -webkit-hyphenate-before: 2; -webkit-hyphenate-after: 3; hyphenate-lines: 3; -webkit-font-feature-settings: "liga", "dlig"; -moz-font-feature-settings: "liga=1, dlig=1"; -ms-font-feature-settings: "liga", "dlig"; -o-font-feature-settings: "liga", "dlig"; font-feature-settings: "liga", "dlig"; }
+p {
+  -ms-word-wrap: break-word;
+  word-break: break-word;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+  -webkit-hyphenate-before: 2;
+  -webkit-hyphenate-after: 3;
+  hyphenate-lines: 3;
+  -webkit-font-feature-settings: "liga", "dlig";
+  -moz-font-feature-settings: "liga=1, dlig=1";
+  -ms-font-feature-settings: "liga", "dlig";
+  -o-font-feature-settings: "liga", "dlig";
+  font-feature-settings: "liga", "dlig"; }
 
 /******************************************************************
 Site Name:
@@ -336,32 +619,57 @@ probably best not to use it. I mean, were you going to anyway? */
 * http://www.opensource.org/licenses/mit-license.php
 *
 */
-*, *:after, *:before { margin: 0; padding: 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
 
 /* Set the width of the grid */
-.frame { margin: 0 auto; }
+.frame {
+  margin: 0 auto; }
 
 /* Attribute selector */
-[class*='bit-'] { float: left; padding: 1em; }
+[class*='bit-'] {
+  float: left;
+  padding: 1em; }
 
 /* Floats last ".bit-" to the right */
-[class*='bit-']:last-of-type { float: right; }
-[class*='bit-']:last-of-type.onlyone { float: left; }
+[class*='bit-']:last-of-type {
+  float: right; }
+  [class*='bit-']:last-of-type.onlyone {
+    float: left; }
 
 /* Clearfix */
-.frame:after { content: ""; display: table; clear: both; }
+.frame:after {
+  content: "";
+  display: table;
+  clear: both; }
 
 /* Full */
-.bit-1 { border: 1px solid red; width: 33.33%; }
+.bit-1 {
+  border: 1px solid red;
+  width: 33.33%; }
 
-.bit-2 { border: 1px solid green; width: 66.66%; }
+.bit-2 {
+  border: 1px solid green;
+  width: 66.66%; }
 
-.bit-3 { border: 1px solid green; width: 100%; }
+.bit-3 {
+  border: 1px solid green;
+  width: 100%; }
 
 /* Landscape mobile & down */
-@media (max-width: 30em) { .bit-2, .bit-1 { width: 100%; } }
+@media (max-width: 30em) {
+  .bit-2, .bit-1 {
+    width: 100%; } }
 /* Portrait tablet to landscape */
-@media (min-width: 30em) and (max-width: 50em) { .bit-2, .bit-1 { width: 100%; } }
+@media (min-width: 30em) and (max-width: 50em) {
+  .bit-2, .bit-1 {
+    width: 100%; } }
 /* Landscape to small desktop */
 /*********************
 IMPORTING MODULES
@@ -380,15 +688,26 @@ If you want to use these alerts in your design, you can. If not,
 you can just remove this stylesheet.
 
 ******************************************************************/
-.alert-help, .alert-info, .alert-error, .alert-success { margin: 10px; padding: 5px 18px; border: 1px solid; }
+.alert-help, .alert-info, .alert-error, .alert-success {
+  margin: 10px;
+  padding: 5px 18px;
+  border: 1px solid; }
 
-.alert-help { border-color: #e8dc59; background: #ebe16f; }
+.alert-help {
+  border-color: #e8dc59;
+  background: #ebe16f; }
 
-.alert-info { border-color: #bfe4f4; background: #d5edf8; }
+.alert-info {
+  border-color: #bfe4f4;
+  background: #d5edf8; }
 
-.alert-error { border-color: #f8cdce; background: #fbe3e4; }
+.alert-error {
+  border-color: #f8cdce;
+  background: #fbe3e4; }
 
-.alert-success { border-color: #deeaae; background: #e6efc2; }
+.alert-success {
+  border-color: #deeaae;
+  background: #e6efc2; }
 
 /******************************************************************
 Site Name:
@@ -414,18 +733,39 @@ Here's a quick video to show how it works:
 http://www.youtube.com/watch?v=hwdVpKiJzac
 
 *********************/
-.blue-btn, .comment-reply-link, #submit, .widget #searchsubmit { display: inline-block; position: relative; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; text-decoration: none; color: white; font-size: 0.9em; line-height: 34px; font-weight: normal; padding: 0 24px; border-radius: 4px; border: 0; cursor: pointer; -webkit-transition: background-color 0.14s ease-in-out; transition: background-color 0.14s ease-in-out; }
-.blue-btn:hover, .comment-reply-link:hover, #submit:hover, .widget #searchsubmit:hover, .blue-btn:focus, .comment-reply-link:focus, #submit:focus, .widget #searchsubmit:focus { color: white; text-decoration: none; outline: none; }
-.blue-btn:active, .comment-reply-link:active, #submit:active, .widget #searchsubmit:active { top: 1px; }
+.blue-btn, .comment-reply-link, #submit, .widget #searchsubmit {
+  display: inline-block;
+  position: relative;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  color: white;
+  font-size: 0.9em;
+  line-height: 34px;
+  font-weight: normal;
+  padding: 0 24px;
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
+  -webkit-transition: background-color 0.14s ease-in-out;
+  transition: background-color 0.14s ease-in-out; }
+  .blue-btn:hover, .comment-reply-link:hover, #submit:hover, .widget #searchsubmit:hover, .blue-btn:focus, .comment-reply-link:focus, #submit:focus, .widget #searchsubmit:focus {
+    color: white;
+    text-decoration: none;
+    outline: none; }
+  .blue-btn:active, .comment-reply-link:active, #submit:active, .widget #searchsubmit:active {
+    top: 1px; }
 
 /*
 An example button.
 You can use this example if you want. Just replace all the variables
 and it will create a button dependant on those variables.
 */
-.blue-btn, .comment-reply-link, #submit, .widget #searchsubmit { background-color: #2980b9; }
-.blue-btn:hover, .comment-reply-link:hover, #submit:hover, .widget #searchsubmit:hover, .blue-btn:focus, .comment-reply-link:focus, #submit:focus, .widget #searchsubmit:focus { background-color: #2574a8; }
-.blue-btn:active, .comment-reply-link:active, #submit:active, .widget #searchsubmit:active { background-color: #2472a4; }
+.blue-btn, .comment-reply-link, #submit, .widget #searchsubmit {
+  background-color: #2980b9; }
+  .blue-btn:hover, .comment-reply-link:hover, #submit:hover, .widget #searchsubmit:hover, .blue-btn:focus, .comment-reply-link:focus, #submit:focus, .widget #searchsubmit:focus {
+    background-color: #2574a8; }
+  .blue-btn:active, .comment-reply-link:active, #submit:active, .widget #searchsubmit:active {
+    background-color: #2472a4; }
 
 /******************************************************************
 Site Name:
@@ -447,149 +787,704 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
 /*********************
 INPUTS
 *********************/
-input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], select, textarea, .field { display: block; height: 40px; line-height: 1em; padding: 0 12px; margin-bottom: 14px; font-size: 1em; color: #5c6b80; border-radius: 3px; vertical-align: middle; box-shadow: none; border: 0; width: 100%; max-width: 400px; font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; background-color: #eaedf2; -webkit-transition: background-color 0.24s ease-in-out; transition: background-color 0.24s ease-in-out; border-bottom: 1px solid #5c6b80; }
-input[type="text"]:focus, input[type="text"]:active, input[type="password"]:focus, input[type="password"]:active, input[type="datetime"]:focus, input[type="datetime"]:active, input[type="datetime-local"]:focus, input[type="datetime-local"]:active, input[type="date"]:focus, input[type="date"]:active, input[type="month"]:focus, input[type="month"]:active, input[type="time"]:focus, input[type="time"]:active, input[type="week"]:focus, input[type="week"]:active, input[type="number"]:focus, input[type="number"]:active, input[type="email"]:focus, input[type="email"]:active, input[type="url"]:focus, input[type="url"]:active, input[type="search"]:focus, input[type="search"]:active, input[type="tel"]:focus, input[type="tel"]:active, input[type="color"]:focus, input[type="color"]:active, select:focus, select:active, textarea:focus, textarea:active, .field:focus, .field:active { background-color: #f7f8fa; outline: none; }
-input[type="text"].error, input[type="text"].is-invalid, input[type="password"].error, input[type="password"].is-invalid, input[type="datetime"].error, input[type="datetime"].is-invalid, input[type="datetime-local"].error, input[type="datetime-local"].is-invalid, input[type="date"].error, input[type="date"].is-invalid, input[type="month"].error, input[type="month"].is-invalid, input[type="time"].error, input[type="time"].is-invalid, input[type="week"].error, input[type="week"].is-invalid, input[type="number"].error, input[type="number"].is-invalid, input[type="email"].error, input[type="email"].is-invalid, input[type="url"].error, input[type="url"].is-invalid, input[type="search"].error, input[type="search"].is-invalid, input[type="tel"].error, input[type="tel"].is-invalid, input[type="color"].error, input[type="color"].is-invalid, select.error, select.is-invalid, textarea.error, textarea.is-invalid, .field.error, .field.is-invalid { color: #fbe3e4; border-color: #fbe3e4; background-color: white; background-position: 99% center; background-repeat: no-repeat; background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo2NDM0NDREQkYwNEIxMUUyOTI4REZGQTEzMzA2MDcyNiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo2NDM0NDREQ0YwNEIxMUUyOTI4REZGQTEzMzA2MDcyNiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjQ3ODRGRkE2RjA0QTExRTI5MjhERkZBMTMzMDYwNzI2IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjY0MzQ0NERBRjA0QjExRTI5MjhERkZBMTMzMDYwNzI2Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+U8iT5wAAAedJREFUeNqk1U9I02Ecx/HtV3aIFAc1hcRDUoGXRAq0oNLA2CrsEFmHbikZu0iQYIFGYAiegkCpLipBxPpDEBMUzB0EhSG2LhG7hMR2GviPgUTvB57Bw8P3+U23B16HPX8+e/b8nt93wezZSMCnhXETF3AcB5BDCnH8Dq98ExcGHcFn8Ah3cdDni+fxnPDv9oAnTB7CKu6VCFXtChZy56LxUjt+jfuB8toSOth9wd7xWAWhqrUjYR/FRTwWJm+iIPT/w7bQf5ljiZnBg45dtKFX6H+LU8gIY8OEV6vgTkStwXWE8BPTGDHGPqNPz2mCfSOOYkA99TvCt1bhGPL68zMcwmncMuape10jrI+q4BbHi/FLn31S9z2x5tRhTc+1W506ipM+T3oRD4X+8+qtc4SqFvL0z/Fr14S+Szjis8bz9Lvvaq8cwS/wwGfdlqfPSWqTiFlX77o13u9Ym1PBs8JAytpRoy44X9Ft9E/gvbA+rYKn8NcaaMVc8UHgBw4b9/iqUQZ6hOAJFbyDcUflmsEX4a6+wTtHGfhAIUqa1U29Zc2BytouThD8x6xuN5CtMPi2CrXLZkZf/HyZoRFCP7n+QVR4PV7uI/AjGghN7OU/r1ilnqILtfpNC+o6vIFljBKYlhb/F2AAgaBsWR5wRiIAAAAASUVORK5CYII=); outline-color: #fbe3e4; }
-input[type="text"].success, input[type="text"].is-valid, input[type="password"].success, input[type="password"].is-valid, input[type="datetime"].success, input[type="datetime"].is-valid, input[type="datetime-local"].success, input[type="datetime-local"].is-valid, input[type="date"].success, input[type="date"].is-valid, input[type="month"].success, input[type="month"].is-valid, input[type="time"].success, input[type="time"].is-valid, input[type="week"].success, input[type="week"].is-valid, input[type="number"].success, input[type="number"].is-valid, input[type="email"].success, input[type="email"].is-valid, input[type="url"].success, input[type="url"].is-valid, input[type="search"].success, input[type="search"].is-valid, input[type="tel"].success, input[type="tel"].is-valid, input[type="color"].success, input[type="color"].is-valid, select.success, select.is-valid, textarea.success, textarea.is-valid, .field.success, .field.is-valid { color: #e6efc2; border-color: #e6efc2; background-color: white; background-position: 99% center; background-repeat: no-repeat; background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo2NDM0NDRERkYwNEIxMUUyOTI4REZGQTEzMzA2MDcyNiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo2NDM0NDRFMEYwNEIxMUUyOTI4REZGQTEzMzA2MDcyNiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjY0MzQ0NERERjA0QjExRTI5MjhERkZBMTMzMDYwNzI2IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjY0MzQ0NERFRjA0QjExRTI5MjhERkZBMTMzMDYwNzI2Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+7olkTQAAAfhJREFUeNqklU9oE0EUhzdroWjw0tBeWlDxkEaIp55TsCU9VKIgCrHBelA8CQ1Kr1WPbZrQ3gqtQqvGqxpQc2jBk6BIIaAGD4qNCKURpDSKiPi98gLDsJt//uBjsztvfnk7895sIPAw6/joGMThFJyAXn2+A+9gA57/TaY/eU0OeBgfhGm4DiGnsb7DAszxBz/NAdcKjMJLuNWCqagHbsscN5+L+hmH4QkMOe1L5jzFfNA2PgT34ajTuY7AGuZB0/hmh5m+gS0r8xv1zRvg+gGCHZiOwnF4DP3iB3sQkYxPd2C6CWfhB9Xwlus5+K1j4jXuaq3a+gM1H9OPcAa+7q9lPidZJqHbiIm7Wg22rsEI7FrPSzAMX/T+ADyAKSsu7Fr1KplehLvwCs5DvfBf65p+MypqRbO1FXK9utH4/QKuaqYTsG3E3INJv00Q46px3+XxanJ/Ute2/vqP4FKDza2KcdljIKdnhS0xXYULTaqmLMZFn8FFSFtvt6x70ExFCS5oUXspq2ssa7oEl1swFa+CGFdgtkHgPDyDKy02zyxNU6lXRUZb1EuHYayNNs+Yh5B0WQo+/8fpJnNTZFuzz2OpjoQ2QruSOQlMy35fEGmEGMxY9e1brxobw7TkWA1h6xfckUPb+JhGoE/Hpfvew7qUld/H9J8AAwDpw3WYrxcZ3QAAAABJRU5ErkJggg==); outline-color: #e6efc2; }
-input[type="text"][disabled], input[type="text"].is-disabled, input[type="password"][disabled], input[type="password"].is-disabled, input[type="datetime"][disabled], input[type="datetime"].is-disabled, input[type="datetime-local"][disabled], input[type="datetime-local"].is-disabled, input[type="date"][disabled], input[type="date"].is-disabled, input[type="month"][disabled], input[type="month"].is-disabled, input[type="time"][disabled], input[type="time"].is-disabled, input[type="week"][disabled], input[type="week"].is-disabled, input[type="number"][disabled], input[type="number"].is-disabled, input[type="email"][disabled], input[type="email"].is-disabled, input[type="url"][disabled], input[type="url"].is-disabled, input[type="search"][disabled], input[type="search"].is-disabled, input[type="tel"][disabled], input[type="tel"].is-disabled, input[type="color"][disabled], input[type="color"].is-disabled, select[disabled], select.is-disabled, textarea[disabled], textarea.is-disabled, .field[disabled], .field.is-disabled { cursor: not-allowed; border-color: #cfcfcf; opacity: 0.6; }
-input[type="text"][disabled]:focus, input[type="text"][disabled]:active, input[type="text"].is-disabled:focus, input[type="text"].is-disabled:active, input[type="password"][disabled]:focus, input[type="password"][disabled]:active, input[type="password"].is-disabled:focus, input[type="password"].is-disabled:active, input[type="datetime"][disabled]:focus, input[type="datetime"][disabled]:active, input[type="datetime"].is-disabled:focus, input[type="datetime"].is-disabled:active, input[type="datetime-local"][disabled]:focus, input[type="datetime-local"][disabled]:active, input[type="datetime-local"].is-disabled:focus, input[type="datetime-local"].is-disabled:active, input[type="date"][disabled]:focus, input[type="date"][disabled]:active, input[type="date"].is-disabled:focus, input[type="date"].is-disabled:active, input[type="month"][disabled]:focus, input[type="month"][disabled]:active, input[type="month"].is-disabled:focus, input[type="month"].is-disabled:active, input[type="time"][disabled]:focus, input[type="time"][disabled]:active, input[type="time"].is-disabled:focus, input[type="time"].is-disabled:active, input[type="week"][disabled]:focus, input[type="week"][disabled]:active, input[type="week"].is-disabled:focus, input[type="week"].is-disabled:active, input[type="number"][disabled]:focus, input[type="number"][disabled]:active, input[type="number"].is-disabled:focus, input[type="number"].is-disabled:active, input[type="email"][disabled]:focus, input[type="email"][disabled]:active, input[type="email"].is-disabled:focus, input[type="email"].is-disabled:active, input[type="url"][disabled]:focus, input[type="url"][disabled]:active, input[type="url"].is-disabled:focus, input[type="url"].is-disabled:active, input[type="search"][disabled]:focus, input[type="search"][disabled]:active, input[type="search"].is-disabled:focus, input[type="search"].is-disabled:active, input[type="tel"][disabled]:focus, input[type="tel"][disabled]:active, input[type="tel"].is-disabled:focus, input[type="tel"].is-disabled:active, input[type="color"][disabled]:focus, input[type="color"][disabled]:active, input[type="color"].is-disabled:focus, input[type="color"].is-disabled:active, select[disabled]:focus, select[disabled]:active, select.is-disabled:focus, select.is-disabled:active, textarea[disabled]:focus, textarea[disabled]:active, textarea.is-disabled:focus, textarea.is-disabled:active, .field[disabled]:focus, .field[disabled]:active, .field.is-disabled:focus, .field.is-disabled:active { background-color: #d5edf8; }
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+select,
+textarea,
+.field {
+  display: block;
+  height: 40px;
+  line-height: 1em;
+  padding: 0 12px;
+  margin-bottom: 14px;
+  font-size: 1em;
+  color: #323944;
+  border-radius: 3px;
+  vertical-align: middle;
+  box-shadow: none;
+  border: 0;
+  width: 100%;
+  max-width: 400px;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #eaedf2;
+  -webkit-transition: background-color 0.24s ease-in-out;
+  transition: background-color 0.24s ease-in-out;
+  border-bottom: 1px solid #323944; }
+  input[type="text"]:focus, input[type="text"]:active,
+  input[type="password"]:focus,
+  input[type="password"]:active,
+  input[type="datetime"]:focus,
+  input[type="datetime"]:active,
+  input[type="datetime-local"]:focus,
+  input[type="datetime-local"]:active,
+  input[type="date"]:focus,
+  input[type="date"]:active,
+  input[type="month"]:focus,
+  input[type="month"]:active,
+  input[type="time"]:focus,
+  input[type="time"]:active,
+  input[type="week"]:focus,
+  input[type="week"]:active,
+  input[type="number"]:focus,
+  input[type="number"]:active,
+  input[type="email"]:focus,
+  input[type="email"]:active,
+  input[type="url"]:focus,
+  input[type="url"]:active,
+  input[type="search"]:focus,
+  input[type="search"]:active,
+  input[type="tel"]:focus,
+  input[type="tel"]:active,
+  input[type="color"]:focus,
+  input[type="color"]:active,
+  select:focus,
+  select:active,
+  textarea:focus,
+  textarea:active,
+  .field:focus,
+  .field:active {
+    background-color: #f7f8fa;
+    outline: none; }
+  input[type="text"].error, input[type="text"].is-invalid,
+  input[type="password"].error,
+  input[type="password"].is-invalid,
+  input[type="datetime"].error,
+  input[type="datetime"].is-invalid,
+  input[type="datetime-local"].error,
+  input[type="datetime-local"].is-invalid,
+  input[type="date"].error,
+  input[type="date"].is-invalid,
+  input[type="month"].error,
+  input[type="month"].is-invalid,
+  input[type="time"].error,
+  input[type="time"].is-invalid,
+  input[type="week"].error,
+  input[type="week"].is-invalid,
+  input[type="number"].error,
+  input[type="number"].is-invalid,
+  input[type="email"].error,
+  input[type="email"].is-invalid,
+  input[type="url"].error,
+  input[type="url"].is-invalid,
+  input[type="search"].error,
+  input[type="search"].is-invalid,
+  input[type="tel"].error,
+  input[type="tel"].is-invalid,
+  input[type="color"].error,
+  input[type="color"].is-invalid,
+  select.error,
+  select.is-invalid,
+  textarea.error,
+  textarea.is-invalid,
+  .field.error,
+  .field.is-invalid {
+    color: #fbe3e4;
+    border-color: #fbe3e4;
+    background-color: white;
+    background-position: 99% center;
+    background-repeat: no-repeat;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo2NDM0NDREQkYwNEIxMUUyOTI4REZGQTEzMzA2MDcyNiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo2NDM0NDREQ0YwNEIxMUUyOTI4REZGQTEzMzA2MDcyNiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjQ3ODRGRkE2RjA0QTExRTI5MjhERkZBMTMzMDYwNzI2IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjY0MzQ0NERBRjA0QjExRTI5MjhERkZBMTMzMDYwNzI2Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+U8iT5wAAAedJREFUeNqk1U9I02Ecx/HtV3aIFAc1hcRDUoGXRAq0oNLA2CrsEFmHbikZu0iQYIFGYAiegkCpLipBxPpDEBMUzB0EhSG2LhG7hMR2GviPgUTvB57Bw8P3+U23B16HPX8+e/b8nt93wezZSMCnhXETF3AcB5BDCnH8Dq98ExcGHcFn8Ah3cdDni+fxnPDv9oAnTB7CKu6VCFXtChZy56LxUjt+jfuB8toSOth9wd7xWAWhqrUjYR/FRTwWJm+iIPT/w7bQf5ljiZnBg45dtKFX6H+LU8gIY8OEV6vgTkStwXWE8BPTGDHGPqNPz2mCfSOOYkA99TvCt1bhGPL68zMcwmncMuape10jrI+q4BbHi/FLn31S9z2x5tRhTc+1W506ipM+T3oRD4X+8+qtc4SqFvL0z/Fr14S+Szjis8bz9Lvvaq8cwS/wwGfdlqfPSWqTiFlX77o13u9Ym1PBs8JAytpRoy44X9Ft9E/gvbA+rYKn8NcaaMVc8UHgBw4b9/iqUQZ6hOAJFbyDcUflmsEX4a6+wTtHGfhAIUqa1U29Zc2BytouThD8x6xuN5CtMPi2CrXLZkZf/HyZoRFCP7n+QVR4PV7uI/AjGghN7OU/r1ilnqILtfpNC+o6vIFljBKYlhb/F2AAgaBsWR5wRiIAAAAASUVORK5CYII=);
+    outline-color: #fbe3e4; }
+  input[type="text"].success, input[type="text"].is-valid,
+  input[type="password"].success,
+  input[type="password"].is-valid,
+  input[type="datetime"].success,
+  input[type="datetime"].is-valid,
+  input[type="datetime-local"].success,
+  input[type="datetime-local"].is-valid,
+  input[type="date"].success,
+  input[type="date"].is-valid,
+  input[type="month"].success,
+  input[type="month"].is-valid,
+  input[type="time"].success,
+  input[type="time"].is-valid,
+  input[type="week"].success,
+  input[type="week"].is-valid,
+  input[type="number"].success,
+  input[type="number"].is-valid,
+  input[type="email"].success,
+  input[type="email"].is-valid,
+  input[type="url"].success,
+  input[type="url"].is-valid,
+  input[type="search"].success,
+  input[type="search"].is-valid,
+  input[type="tel"].success,
+  input[type="tel"].is-valid,
+  input[type="color"].success,
+  input[type="color"].is-valid,
+  select.success,
+  select.is-valid,
+  textarea.success,
+  textarea.is-valid,
+  .field.success,
+  .field.is-valid {
+    color: #e6efc2;
+    border-color: #e6efc2;
+    background-color: white;
+    background-position: 99% center;
+    background-repeat: no-repeat;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo2NDM0NDRERkYwNEIxMUUyOTI4REZGQTEzMzA2MDcyNiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo2NDM0NDRFMEYwNEIxMUUyOTI4REZGQTEzMzA2MDcyNiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjY0MzQ0NERERjA0QjExRTI5MjhERkZBMTMzMDYwNzI2IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjY0MzQ0NERFRjA0QjExRTI5MjhERkZBMTMzMDYwNzI2Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+7olkTQAAAfhJREFUeNqklU9oE0EUhzdroWjw0tBeWlDxkEaIp55TsCU9VKIgCrHBelA8CQ1Kr1WPbZrQ3gqtQqvGqxpQc2jBk6BIIaAGD4qNCKURpDSKiPi98gLDsJt//uBjsztvfnk7895sIPAw6/joGMThFJyAXn2+A+9gA57/TaY/eU0OeBgfhGm4DiGnsb7DAszxBz/NAdcKjMJLuNWCqagHbsscN5+L+hmH4QkMOe1L5jzFfNA2PgT34ajTuY7AGuZB0/hmh5m+gS0r8xv1zRvg+gGCHZiOwnF4DP3iB3sQkYxPd2C6CWfhB9Xwlus5+K1j4jXuaq3a+gM1H9OPcAa+7q9lPidZJqHbiIm7Wg22rsEI7FrPSzAMX/T+ADyAKSsu7Fr1KplehLvwCs5DvfBf65p+MypqRbO1FXK9utH4/QKuaqYTsG3E3INJv00Q46px3+XxanJ/Ute2/vqP4FKDza2KcdljIKdnhS0xXYULTaqmLMZFn8FFSFtvt6x70ExFCS5oUXspq2ssa7oEl1swFa+CGFdgtkHgPDyDKy02zyxNU6lXRUZb1EuHYayNNs+Yh5B0WQo+/8fpJnNTZFuzz2OpjoQ2QruSOQlMy35fEGmEGMxY9e1brxobw7TkWA1h6xfckUPb+JhGoE/Hpfvew7qUld/H9J8AAwDpw3WYrxcZ3QAAAABJRU5ErkJggg==);
+    outline-color: #e6efc2; }
+  input[type="text"][disabled], input[type="text"].is-disabled,
+  input[type="password"][disabled],
+  input[type="password"].is-disabled,
+  input[type="datetime"][disabled],
+  input[type="datetime"].is-disabled,
+  input[type="datetime-local"][disabled],
+  input[type="datetime-local"].is-disabled,
+  input[type="date"][disabled],
+  input[type="date"].is-disabled,
+  input[type="month"][disabled],
+  input[type="month"].is-disabled,
+  input[type="time"][disabled],
+  input[type="time"].is-disabled,
+  input[type="week"][disabled],
+  input[type="week"].is-disabled,
+  input[type="number"][disabled],
+  input[type="number"].is-disabled,
+  input[type="email"][disabled],
+  input[type="email"].is-disabled,
+  input[type="url"][disabled],
+  input[type="url"].is-disabled,
+  input[type="search"][disabled],
+  input[type="search"].is-disabled,
+  input[type="tel"][disabled],
+  input[type="tel"].is-disabled,
+  input[type="color"][disabled],
+  input[type="color"].is-disabled,
+  select[disabled],
+  select.is-disabled,
+  textarea[disabled],
+  textarea.is-disabled,
+  .field[disabled],
+  .field.is-disabled {
+    cursor: not-allowed;
+    border-color: #cfcfcf;
+    opacity: 0.6; }
+    input[type="text"][disabled]:focus, input[type="text"][disabled]:active, input[type="text"].is-disabled:focus, input[type="text"].is-disabled:active,
+    input[type="password"][disabled]:focus,
+    input[type="password"][disabled]:active,
+    input[type="password"].is-disabled:focus,
+    input[type="password"].is-disabled:active,
+    input[type="datetime"][disabled]:focus,
+    input[type="datetime"][disabled]:active,
+    input[type="datetime"].is-disabled:focus,
+    input[type="datetime"].is-disabled:active,
+    input[type="datetime-local"][disabled]:focus,
+    input[type="datetime-local"][disabled]:active,
+    input[type="datetime-local"].is-disabled:focus,
+    input[type="datetime-local"].is-disabled:active,
+    input[type="date"][disabled]:focus,
+    input[type="date"][disabled]:active,
+    input[type="date"].is-disabled:focus,
+    input[type="date"].is-disabled:active,
+    input[type="month"][disabled]:focus,
+    input[type="month"][disabled]:active,
+    input[type="month"].is-disabled:focus,
+    input[type="month"].is-disabled:active,
+    input[type="time"][disabled]:focus,
+    input[type="time"][disabled]:active,
+    input[type="time"].is-disabled:focus,
+    input[type="time"].is-disabled:active,
+    input[type="week"][disabled]:focus,
+    input[type="week"][disabled]:active,
+    input[type="week"].is-disabled:focus,
+    input[type="week"].is-disabled:active,
+    input[type="number"][disabled]:focus,
+    input[type="number"][disabled]:active,
+    input[type="number"].is-disabled:focus,
+    input[type="number"].is-disabled:active,
+    input[type="email"][disabled]:focus,
+    input[type="email"][disabled]:active,
+    input[type="email"].is-disabled:focus,
+    input[type="email"].is-disabled:active,
+    input[type="url"][disabled]:focus,
+    input[type="url"][disabled]:active,
+    input[type="url"].is-disabled:focus,
+    input[type="url"].is-disabled:active,
+    input[type="search"][disabled]:focus,
+    input[type="search"][disabled]:active,
+    input[type="search"].is-disabled:focus,
+    input[type="search"].is-disabled:active,
+    input[type="tel"][disabled]:focus,
+    input[type="tel"][disabled]:active,
+    input[type="tel"].is-disabled:focus,
+    input[type="tel"].is-disabled:active,
+    input[type="color"][disabled]:focus,
+    input[type="color"][disabled]:active,
+    input[type="color"].is-disabled:focus,
+    input[type="color"].is-disabled:active,
+    select[disabled]:focus,
+    select[disabled]:active,
+    select.is-disabled:focus,
+    select.is-disabled:active,
+    textarea[disabled]:focus,
+    textarea[disabled]:active,
+    textarea.is-disabled:focus,
+    textarea.is-disabled:active,
+    .field[disabled]:focus,
+    .field[disabled]:active,
+    .field.is-disabled:focus,
+    .field.is-disabled:active {
+      background-color: #d5edf8; }
 
-input[type="password"] { letter-spacing: 0.3em; }
+input[type="password"] {
+  letter-spacing: 0.3em; }
 
-textarea { max-width: 100%; min-height: 120px; line-height: 1.5em; }
+textarea {
+  max-width: 100%;
+  min-height: 120px;
+  line-height: 1.5em; }
 
-select { -webkit-appearance: none; /* 1 */ -moz-appearance: none; appearance: none; background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAHCAYAAADXhRcnAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpEOEZCMjYxMEYwNUUxMUUyOTI4REZGQTEzMzA2MDcyNiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpEOEZCMjYxMUYwNUUxMUUyOTI4REZGQTEzMzA2MDcyNiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkQ4RkIyNjBFRjA1RTExRTI5MjhERkZBMTMzMDYwNzI2IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkQ4RkIyNjBGRjA1RTExRTI5MjhERkZBMTMzMDYwNzI2Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Vxkp9gAAAI9JREFUeNpidHFxucHAwKAOxE+AmJmBMPgLxDJAfJMFSKwD4kqoAClgA+P///8ZXF1dPaCGcBKh6QcQB+3evXs7WDMIAA2QB1I7gFgDj0aQFz2BGh+AOEwwUaDAQyBlCMR7cGjcC5KHaQQBuM3IAOiKTiBVhiTUDdRUhq4Oq2aoAelAahIQ5wM1zsCmBiDAADhYMJXVZ9u9AAAAAElFTkSuQmCC); background-repeat: no-repeat; background-position: 97.5% center; }
+select {
+  -webkit-appearance: none;
+  /* 1 */
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAHCAYAAADXhRcnAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpEOEZCMjYxMEYwNUUxMUUyOTI4REZGQTEzMzA2MDcyNiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpEOEZCMjYxMUYwNUUxMUUyOTI4REZGQTEzMzA2MDcyNiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkQ4RkIyNjBFRjA1RTExRTI5MjhERkZBMTMzMDYwNzI2IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkQ4RkIyNjBGRjA1RTExRTI5MjhERkZBMTMzMDYwNzI2Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Vxkp9gAAAI9JREFUeNpidHFxucHAwKAOxE+AmJmBMPgLxDJAfJMFSKwD4kqoAClgA+P///8ZXF1dPaCGcBKh6QcQB+3evXs7WDMIAA2QB1I7gFgDj0aQFz2BGh+AOEwwUaDAQyBlCMR7cGjcC5KHaQQBuM3IAOiKTiBVhiTUDdRUhq4Oq2aoAelAahIQ5wM1zsCmBiDAADhYMJXVZ9u9AAAAAElFTkSuQmCC);
+  background-repeat: no-repeat;
+  background-position: 97.5% center; }
 
 /* reset webkit search input browser style */
-input { outline: none; }
+input {
+  outline: none; }
 
-input[type=search] { -webkit-appearance: textfield; -webkit-box-sizing: content-box; font-family: inherit; font-size: 100%; }
+input[type=search] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+  font-family: inherit;
+  font-size: 100%; }
 
-input::-webkit-search-decoration, input::-webkit-search-cancel-button { display: none; /* remove the search and cancel icon */ }
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button {
+  display: none;
+  /* remove the search and cancel icon */ }
 
 /* placeholder */
-input:-moz-placeholder { color: #999; }
+input:-moz-placeholder {
+  color: #999; }
 
-input::-webkit-input-placeholder { color: #999; }
+input::-webkit-input-placeholder {
+  color: #999; }
 
 /* demo B */
-#demo-b input[type=search] { width: 15px; padding-left: 10px; color: transparent; cursor: pointer; }
+#demo-b input[type=search] {
+  width: 15px;
+  padding-left: 10px;
+  color: transparent;
+  cursor: pointer; }
 
-#demo-b input[type=search]:hover { background-color: #fff; }
+#demo-b input[type=search]:hover {
+  background-color: #fff; }
 
-#demo-b input[type=search]:focus { width: 130px; padding-left: 32px; color: #000; background-color: #fff; cursor: auto; }
+#demo-b input[type=search]:focus {
+  width: 130px;
+  padding-left: 32px;
+  color: #000;
+  background-color: #fff;
+  cursor: auto; }
 
-#demo-b input:-moz-placeholder { color: transparent; }
+#demo-b input:-moz-placeholder {
+  color: transparent; }
 
-#demo-b input::-webkit-input-placeholder { color: transparent; }
+#demo-b input::-webkit-input-placeholder {
+  color: transparent; }
 
 /* Magnific Popup CSS */
-.mfp-bg { top: 0; left: 0; width: 100%; height: 100%; z-index: 1042; overflow: hidden; position: fixed; background: #0b0b0b; opacity: 0.8; filter: alpha(opacity=80); }
+.mfp-bg {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1042;
+  overflow: hidden;
+  position: fixed;
+  background: #0b0b0b;
+  opacity: 0.8;
+  filter: alpha(opacity=80); }
 
-.mfp-wrap { top: 0; left: 0; width: 100%; height: 100%; z-index: 1043; position: fixed; outline: none !important; -webkit-backface-visibility: hidden; }
+.mfp-wrap {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1043;
+  position: fixed;
+  outline: none !important;
+  -webkit-backface-visibility: hidden; }
 
-.mfp-container { text-align: center; position: absolute; width: 100%; height: 100%; left: 0; top: 0; padding: 0 8px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.mfp-container {
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  padding: 0 8px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
 
-.mfp-container:before { content: ''; display: inline-block; height: 100%; vertical-align: middle; }
+.mfp-container:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle; }
 
-.mfp-align-top .mfp-container:before { display: none; }
+.mfp-align-top .mfp-container:before {
+  display: none; }
 
-.mfp-content { position: relative; display: inline-block; vertical-align: middle; margin: 0 auto; text-align: left; z-index: 1045; }
+.mfp-content {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 auto;
+  text-align: left;
+  z-index: 1045; }
 
-.mfp-inline-holder .mfp-content, .mfp-ajax-holder .mfp-content { width: 100%; cursor: auto; }
+.mfp-inline-holder .mfp-content,
+.mfp-ajax-holder .mfp-content {
+  width: 100%;
+  cursor: auto; }
 
-.mfp-ajax-cur { cursor: progress; }
+.mfp-ajax-cur {
+  cursor: progress; }
 
-.mfp-zoom-out-cur, .mfp-zoom-out-cur .mfp-image-holder .mfp-close { cursor: -moz-zoom-out; cursor: -webkit-zoom-out; cursor: zoom-out; }
+.mfp-zoom-out-cur, .mfp-zoom-out-cur .mfp-image-holder .mfp-close {
+  cursor: -moz-zoom-out;
+  cursor: -webkit-zoom-out;
+  cursor: zoom-out; }
 
-.mfp-zoom { cursor: pointer; cursor: -webkit-zoom-in; cursor: -moz-zoom-in; cursor: zoom-in; }
+.mfp-zoom {
+  cursor: pointer;
+  cursor: -webkit-zoom-in;
+  cursor: -moz-zoom-in;
+  cursor: zoom-in; }
 
-.mfp-auto-cursor .mfp-content { cursor: auto; }
+.mfp-auto-cursor .mfp-content {
+  cursor: auto; }
 
-.mfp-close, .mfp-arrow, .mfp-preloader, .mfp-counter { -webkit-user-select: none; -moz-user-select: none; user-select: none; }
+.mfp-close,
+.mfp-arrow,
+.mfp-preloader,
+.mfp-counter {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none; }
 
-.mfp-loading.mfp-figure { display: none; }
+.mfp-loading.mfp-figure {
+  display: none; }
 
-.mfp-hide { display: none !important; }
+.mfp-hide {
+  display: none !important; }
 
-.mfp-preloader { color: #cccccc; position: absolute; top: 50%; width: auto; text-align: center; margin-top: -0.8em; left: 8px; right: 8px; z-index: 1044; }
-.mfp-preloader a { color: #cccccc; }
-.mfp-preloader a:hover { color: white; }
+.mfp-preloader {
+  color: #cccccc;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  text-align: center;
+  margin-top: -0.8em;
+  left: 8px;
+  right: 8px;
+  z-index: 1044; }
+  .mfp-preloader a {
+    color: #cccccc; }
+    .mfp-preloader a:hover {
+      color: white; }
 
-.mfp-s-ready .mfp-preloader { display: none; }
+.mfp-s-ready .mfp-preloader {
+  display: none; }
 
-.mfp-s-error .mfp-content { display: none; }
+.mfp-s-error .mfp-content {
+  display: none; }
 
-button.mfp-close, button.mfp-arrow { overflow: visible; cursor: pointer; background: transparent; border: 0; -webkit-appearance: none; display: block; outline: none; padding: 0; z-index: 1046; -webkit-box-shadow: none; box-shadow: none; }
-button::-moz-focus-inner { padding: 0; border: 0; }
+button.mfp-close, button.mfp-arrow {
+  overflow: visible;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  -webkit-appearance: none;
+  display: block;
+  outline: none;
+  padding: 0;
+  z-index: 1046;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0; }
 
-.mfp-close { width: 44px; height: 44px; line-height: 44px; position: absolute; right: 0; top: 0; text-decoration: none; text-align: center; opacity: 0.65; filter: alpha(opacity=65); padding: 0 0 18px 10px; color: white; font-style: normal; font-size: 28px; font-family: Arial, Baskerville, monospace; }
-.mfp-close:hover, .mfp-close:focus { opacity: 1; filter: alpha(opacity=100); }
-.mfp-close:active { top: 1px; }
+.mfp-close {
+  width: 44px;
+  height: 44px;
+  line-height: 44px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  text-decoration: none;
+  text-align: center;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  padding: 0 0 18px 10px;
+  color: white;
+  font-style: normal;
+  font-size: 28px;
+  font-family: Arial, Baskerville, monospace; }
+  .mfp-close:hover, .mfp-close:focus {
+    opacity: 1;
+    filter: alpha(opacity=100); }
+  .mfp-close:active {
+    top: 1px; }
 
-.mfp-close-btn-in .mfp-close { color: #333333; }
+.mfp-close-btn-in .mfp-close {
+  color: #333333; }
 
-.mfp-image-holder .mfp-close, .mfp-iframe-holder .mfp-close { color: white; right: -6px; text-align: right; padding-right: 6px; width: 100%; }
+.mfp-image-holder .mfp-close,
+.mfp-iframe-holder .mfp-close {
+  color: white;
+  right: -6px;
+  text-align: right;
+  padding-right: 6px;
+  width: 100%; }
 
-.mfp-counter { position: absolute; top: 0; right: 0; color: #cccccc; font-size: 12px; line-height: 18px; white-space: nowrap; }
+.mfp-counter {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #cccccc;
+  font-size: 12px;
+  line-height: 18px;
+  white-space: nowrap; }
 
-.mfp-arrow { position: absolute; opacity: 0.65; filter: alpha(opacity=65); margin: 0; top: 50%; margin-top: -55px; padding: 0; width: 90px; height: 110px; -webkit-tap-highlight-color: transparent; }
-.mfp-arrow:active { margin-top: -54px; }
-.mfp-arrow:hover, .mfp-arrow:focus { opacity: 1; filter: alpha(opacity=100); }
-.mfp-arrow:before, .mfp-arrow:after, .mfp-arrow .mfp-b, .mfp-arrow .mfp-a { content: ''; display: block; width: 0; height: 0; position: absolute; left: 0; top: 0; margin-top: 35px; margin-left: 35px; border: medium inset transparent; }
-.mfp-arrow:after, .mfp-arrow .mfp-a { border-top-width: 13px; border-bottom-width: 13px; top: 8px; }
-.mfp-arrow:before, .mfp-arrow .mfp-b { border-top-width: 21px; border-bottom-width: 21px; opacity: 0.7; }
+.mfp-arrow {
+  position: absolute;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  margin: 0;
+  top: 50%;
+  margin-top: -55px;
+  padding: 0;
+  width: 90px;
+  height: 110px;
+  -webkit-tap-highlight-color: transparent; }
+  .mfp-arrow:active {
+    margin-top: -54px; }
+  .mfp-arrow:hover, .mfp-arrow:focus {
+    opacity: 1;
+    filter: alpha(opacity=100); }
+  .mfp-arrow:before, .mfp-arrow:after,
+  .mfp-arrow .mfp-b,
+  .mfp-arrow .mfp-a {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-top: 35px;
+    margin-left: 35px;
+    border: medium inset transparent; }
+  .mfp-arrow:after,
+  .mfp-arrow .mfp-a {
+    border-top-width: 13px;
+    border-bottom-width: 13px;
+    top: 8px; }
+  .mfp-arrow:before,
+  .mfp-arrow .mfp-b {
+    border-top-width: 21px;
+    border-bottom-width: 21px;
+    opacity: 0.7; }
 
-.mfp-arrow-left { left: 0; }
-.mfp-arrow-left:after, .mfp-arrow-left .mfp-a { border-right: 17px solid white; margin-left: 31px; }
-.mfp-arrow-left:before, .mfp-arrow-left .mfp-b { margin-left: 25px; border-right: 27px solid #3f3f3f; }
+.mfp-arrow-left {
+  left: 0; }
+  .mfp-arrow-left:after,
+  .mfp-arrow-left .mfp-a {
+    border-right: 17px solid white;
+    margin-left: 31px; }
+  .mfp-arrow-left:before,
+  .mfp-arrow-left .mfp-b {
+    margin-left: 25px;
+    border-right: 27px solid #3f3f3f; }
 
-.mfp-arrow-right { right: 0; }
-.mfp-arrow-right:after, .mfp-arrow-right .mfp-a { border-left: 17px solid white; margin-left: 39px; }
-.mfp-arrow-right:before, .mfp-arrow-right .mfp-b { border-left: 27px solid #3f3f3f; }
+.mfp-arrow-right {
+  right: 0; }
+  .mfp-arrow-right:after,
+  .mfp-arrow-right .mfp-a {
+    border-left: 17px solid white;
+    margin-left: 39px; }
+  .mfp-arrow-right:before,
+  .mfp-arrow-right .mfp-b {
+    border-left: 27px solid #3f3f3f; }
 
-.mfp-iframe-holder { padding-top: 40px; padding-bottom: 40px; }
-.mfp-iframe-holder .mfp-content { line-height: 0; width: 100%; max-width: 900px; }
-.mfp-iframe-holder .mfp-close { top: -40px; }
+.mfp-iframe-holder {
+  padding-top: 40px;
+  padding-bottom: 40px; }
+  .mfp-iframe-holder .mfp-content {
+    line-height: 0;
+    width: 100%;
+    max-width: 900px; }
+  .mfp-iframe-holder .mfp-close {
+    top: -40px; }
 
-.mfp-iframe-scaler { width: 100%; height: 0; overflow: hidden; padding-top: 56.25%; }
-.mfp-iframe-scaler iframe { position: absolute; display: block; top: 0; left: 0; width: 100%; height: 100%; box-shadow: 0 0 8px rgba(0, 0, 0, 0.6); background: black; }
+.mfp-iframe-scaler {
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  padding-top: 56.25%; }
+  .mfp-iframe-scaler iframe {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+    background: black; }
 
 /* Main image in popup */
-img.mfp-img { width: auto; max-width: 100%; height: auto; display: block; line-height: 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 40px 0 40px; margin: 0 auto; }
+img.mfp-img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  line-height: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 40px 0 40px;
+  margin: 0 auto; }
 
 /* The shadow behind the image */
-.mfp-figure { line-height: 0; }
-.mfp-figure:after { content: ''; position: absolute; left: 0; top: 40px; bottom: 40px; display: block; right: 0; width: auto; height: auto; z-index: -1; box-shadow: 0 0 8px rgba(0, 0, 0, 0.6); background: #444444; }
-.mfp-figure small { color: #bdbdbd; display: block; font-size: 12px; line-height: 14px; }
-.mfp-figure figure { margin: 0; }
+.mfp-figure {
+  line-height: 0; }
+  .mfp-figure:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 40px;
+    bottom: 40px;
+    display: block;
+    right: 0;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+    background: #444444; }
+  .mfp-figure small {
+    color: #bdbdbd;
+    display: block;
+    font-size: 12px;
+    line-height: 14px; }
+  .mfp-figure figure {
+    margin: 0; }
 
-.mfp-bottom-bar { margin-top: -36px; position: absolute; top: 100%; left: 0; width: 100%; cursor: auto; }
+.mfp-bottom-bar {
+  margin-top: -36px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  cursor: auto; }
 
-.mfp-title { text-align: left; line-height: 18px; color: #f3f3f3; word-wrap: break-word; padding-right: 36px; }
+.mfp-title {
+  text-align: left;
+  line-height: 18px;
+  color: #f3f3f3;
+  word-wrap: break-word;
+  padding-right: 36px; }
 
-.mfp-image-holder .mfp-content { max-width: 100%; }
+.mfp-image-holder .mfp-content {
+  max-width: 100%; }
 
-.mfp-gallery .mfp-image-holder .mfp-figure { cursor: pointer; }
+.mfp-gallery .mfp-image-holder .mfp-figure {
+  cursor: pointer; }
 
-@media screen and (max-width: 800px) and (orientation: landscape), screen and (max-height: 300px) { /** Remove all paddings around the image on small screen */
-  .mfp-img-mobile .mfp-image-holder { padding-left: 0; padding-right: 0; }
-  .mfp-img-mobile img.mfp-img { padding: 0; }
-  .mfp-img-mobile .mfp-figure:after { top: 0; bottom: 0; }
-  .mfp-img-mobile .mfp-figure small { display: inline; margin-left: 5px; }
-  .mfp-img-mobile .mfp-bottom-bar { background: rgba(0, 0, 0, 0.6); bottom: 0; margin: 0; top: auto; padding: 3px 5px; position: fixed; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
-  .mfp-img-mobile .mfp-bottom-bar:empty { padding: 0; }
-  .mfp-img-mobile .mfp-counter { right: 5px; top: 3px; }
-  .mfp-img-mobile .mfp-close { top: 0; right: 0; width: 35px; height: 35px; line-height: 35px; background: rgba(0, 0, 0, 0.6); position: fixed; text-align: center; padding: 0; } }
-@media all and (max-width: 900px) { .mfp-arrow { -webkit-transform: scale(0.75); transform: scale(0.75); }
-  .mfp-arrow-left { -webkit-transform-origin: 0; transform-origin: 0; }
-  .mfp-arrow-right { -webkit-transform-origin: 100%; transform-origin: 100%; }
-  .mfp-container { padding-left: 6px; padding-right: 6px; } }
-.mfp-ie7 .mfp-img { padding: 0; }
-.mfp-ie7 .mfp-bottom-bar { width: 600px; left: 50%; margin-left: -300px; margin-top: 5px; padding-bottom: 5px; }
-.mfp-ie7 .mfp-container { padding: 0; }
-.mfp-ie7 .mfp-content { padding-top: 44px; }
-.mfp-ie7 .mfp-close { top: 0; right: 0; padding-top: 0; }
+@media screen and (max-width: 800px) and (orientation: landscape), screen and (max-height: 300px) {
+  /**
+   * Remove all paddings around the image on small screen
+   */
+  .mfp-img-mobile .mfp-image-holder {
+    padding-left: 0;
+    padding-right: 0; }
+  .mfp-img-mobile img.mfp-img {
+    padding: 0; }
+  .mfp-img-mobile .mfp-figure:after {
+    top: 0;
+    bottom: 0; }
+  .mfp-img-mobile .mfp-figure small {
+    display: inline;
+    margin-left: 5px; }
+  .mfp-img-mobile .mfp-bottom-bar {
+    background: rgba(0, 0, 0, 0.6);
+    bottom: 0;
+    margin: 0;
+    top: auto;
+    padding: 3px 5px;
+    position: fixed;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+    .mfp-img-mobile .mfp-bottom-bar:empty {
+      padding: 0; }
+  .mfp-img-mobile .mfp-counter {
+    right: 5px;
+    top: 3px; }
+  .mfp-img-mobile .mfp-close {
+    top: 0;
+    right: 0;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    text-align: center;
+    padding: 0; } }
+@media all and (max-width: 900px) {
+  .mfp-arrow {
+    -webkit-transform: scale(0.75);
+    transform: scale(0.75); }
+
+  .mfp-arrow-left {
+    -webkit-transform-origin: 0;
+    transform-origin: 0; }
+
+  .mfp-arrow-right {
+    -webkit-transform-origin: 100%;
+    transform-origin: 100%; }
+
+  .mfp-container {
+    padding-left: 6px;
+    padding-right: 6px; } }
+.mfp-ie7 .mfp-img {
+  padding: 0; }
+.mfp-ie7 .mfp-bottom-bar {
+  width: 600px;
+  left: 50%;
+  margin-left: -300px;
+  margin-top: 5px;
+  padding-bottom: 5px; }
+.mfp-ie7 .mfp-container {
+  padding: 0; }
+.mfp-ie7 .mfp-content {
+  padding-top: 44px; }
+.mfp-ie7 .mfp-close {
+  top: 0;
+  right: 0;
+  padding-top: 0; }
 
 /*********************
 BASE (MOBILE) SIZE
@@ -612,7 +1507,14 @@ and will be used across all viewports.
 /*********************
 GENERAL STYLES
 *********************/
-body { font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 100%; line-height: 1.5; color: #5c6b80; background-color: #eaedf2; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+body {
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 100%;
+  line-height: 1.5;
+  color: #323944;
+  background-color: #f8f9fa;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
 
 /********************
 WORDPRESS BODY CLASSES
@@ -656,48 +1558,70 @@ style a page via class
 /*********************
 LAYOUT & GRID STYLES
 *********************/
-.wrap { width: 96%; margin: 0 auto; }
+.wrap {
+  width: 96%;
+  margin: 0 auto; }
 
-.bit-3 .inner { background: red; }
+.bit-3 .inner {
+  background: red; }
 
 /*********************
 LINK STYLES
 *********************/
-a, a:visited { color: #f01d4f; /* on hover */ /* on click */ /* mobile tap color */ }
-a:hover, a:focus, a:visited:hover, a:visited:focus { color: #d10e3c; }
-a:link, a:visited:link { /*
-this highlights links on iPhones/iPads.
-so it basically works like the :hover selector
-for mobile devices.
-*/ -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3); }
+a, a:visited {
+  color: #2980b9;
+  /* on hover */
+  /* on click */
+  /* mobile tap color */ }
+  a:hover, a:focus, a:visited:hover, a:visited:focus {
+    color: #164666; }
+  a:link, a:visited:link {
+    /*
+    this highlights links on iPhones/iPads.
+    so it basically works like the :hover selector
+    for mobile devices.
+    */
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3); }
 
 /******************************************************************
 H1, H2, H3, H4, H5 STYLES
 ******************************************************************/
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 { text-rendering: optimizelegibility; font-weight: 500; /*
-if you're going to use webfonts, be sure to check your weights
-http://css-tricks.com/watch-your-font-weight/
-*/ /* removing text decoration from all headline links */ }
-h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a { text-decoration: none; }
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
+  text-rendering: optimizelegibility;
+  font-weight: 500;
+  /*
+  if you're going to use webfonts, be sure to check your weights
+  http://css-tricks.com/watch-your-font-weight/
+  */
+  /* removing text decoration from all headline links */ }
+  h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a {
+    text-decoration: none; }
 
-h1, .h1 { font-size: 2.5em; line-height: 1.333em; }
+h1, .h1 {
+  font-size: 2.5em;
+  line-height: 1.333em; }
 
-h2, .h2 { font-size: 1.75em; line-height: 1.4em; margin-bottom: 0.375em; }
+h2, .h2 {
+  font-size: 1.75em;
+  line-height: 1.4em;
+  margin-bottom: 0.375em; }
 
-h3, .h3 { font-size: 1.125em; }
+h3, .h3 {
+  font-size: 1.125em; }
 
-h4, .h4 { font-size: 1.1em; font-weight: 700; }
+h4, .h4 {
+  font-size: 1.1em;
+  font-weight: 700; }
 
-h5, .h5 { font-size: 0.846em; line-height: 2.09em; text-transform: uppercase; letter-spacing: 2px; }
+h5, .h5 {
+  font-size: 0.846em;
+  line-height: 2.09em;
+  text-transform: uppercase;
+  letter-spacing: 2px; }
 
 /*********************
 HEADER STYLES
 *********************/
-.header { background-color: #323944; }
-
-#logo { margin: 0.75em 0; }
-#logo a { color: white; }
-
 /*********************
 NAVIGATION STYLES
 *********************/
@@ -708,175 +1632,352 @@ easily write one group of styles for
 the navs on the site so our css is cleaner
 and more scalable.
 */
-.nav { border-bottom: 0; margin: 0; /* end .menu li */ /* highlight current page */ /* end current highlighters */ }
-.nav li { /*
-so you really have to rethink your dropdowns for mobile.
-you don't want to have it expand too much because the
-screen is so small. How you manage your menu should
-depend on the project. Here's some great info on it:
-http://www.alistapart.com/articles/organizing-mobile/
-*/ }
-.nav li a { display: block; color: white; text-decoration: none; padding: 0.75em; /*
-remember this is for mobile ONLY, so there's no need
-to even declare hover styles here, you can do it in
-the style.scss file where it's relevant. We want to
-keep this file as small as possible!
-*/ }
-.nav li ul.sub-menu li a, .nav li ul.children li a { padding-left: 30px; }
+.nav {
+  border-bottom: 0;
+  margin: 0;
+  /* end .menu li */
+  /* highlight current page */
+  /* end current highlighters */ }
+  .nav li {
+    /*
+    so you really have to rethink your dropdowns for mobile.
+    you don't want to have it expand too much because the
+    screen is so small. How you manage your menu should
+    depend on the project. Here's some great info on it:
+    http://www.alistapart.com/articles/organizing-mobile/
+    */ }
+    .nav li a {
+      display: block;
+      text-decoration: none;
+      /*
+      remember this is for mobile ONLY, so there's no need
+      to even declare hover styles here, you can do it in
+      the style.scss file where it's relevant. We want to
+      keep this file as small as possible!
+      */ }
+    .nav li ul.sub-menu li a,
+    .nav li ul.children li a {
+      padding-left: 30px; }
 
 /* end .nav */
 /*********************
 POSTS & CONTENT STYLES
 *********************/
-#content { margin-top: 1.5em; }
-
-.hentry { background-color: white; border-radius: 3px; margin-bottom: 1.5em; border: 1px solid #cccccc; }
-.hentry header { border-bottom: 1px solid #f8f9fa; padding: 1.5em; }
-.hentry footer { padding: 1.5em; border-top: 1px solid #f8f9fa; }
-.hentry footer p { margin: 0; }
-
-/* end .hentry */
-.single-title, .page-title, .entry-title { margin: 0; }
-
-/* want to style individual post classes? Booya! */
-/* post by id (i.e. post-3) */
-/* general post style */
-/* general article on a page style */
-/* general style on an attatchment */
-/* sticky post style */
-/* hentry class */
-/* style by category (i.e. category-videos) */
-/* style by tag (i.e. tag-news) */
-/* post meta */
-.byline { color: #9fa6b4; font-style: italic; margin: 0; }
-
-/* entry content */
-.entry-content { padding: 1.5em 1.5em 0; /*
-image alignment on a screen this size may be
-a bit difficult. It's set to start aligning
-and floating images at the next breakpoint,
-but it's up to you. Feel free to change it up.
-*/ }
-.entry-content p { margin: 0 0 1.5em; }
-.entry-content table { width: 100%; border: 1px solid #eaedf2; margin-bottom: 1.5em; }
-.entry-content table caption { margin: 0 0 7px; font-size: 0.75em; color: #9fa6b4; text-transform: uppercase; letter-spacing: 1px; }
-.entry-content tr { border-bottom: 1px solid #eaedf2; }
-.entry-content tr:nth-child(even) { background-color: #f8f9fa; }
-.entry-content td { padding: 7px; border-right: 1px solid #eaedf2; }
-.entry-content td:last-child { border-right: 0; }
-.entry-content th { background-color: #f8f9fa; border-bottom: 1px solid #eaedf2; border-right: 1px solid #eaedf2; }
-.entry-content th:last-child { border-right: 0; }
-.entry-content blockquote { margin: 0 0 1.5em 0.75em; padding: 0 0 0 0.75em; border-left: 3px solid #2980b9; font-style: italic; color: #9fa6b4; }
-.entry-content dd { margin-left: 0; font-size: 0.9em; color: #787878; margin-bottom: 1.5em; }
-.entry-content img { margin: 0 0 1.5em 0; max-width: 100%; height: auto; }
-.entry-content .size-auto, .entry-content .size-full, .entry-content .size-large, .entry-content .size-medium, .entry-content .size-thumbnail { max-width: 100%; height: auto; }
-.entry-content pre { background: #323944; color: #f8f9fa; font-size: 0.9em; padding: 1.5em; margin: 0 0 1.5em; border-radius: 3px; }
-
-/* end .entry-content */
-.wp-caption { max-width: 100%; background: #eee; padding: 5px; /* images inside wp-caption */ }
-.wp-caption img { max-width: 100%; margin-bottom: 0; width: 100%; }
-.wp-caption p.wp-caption-text { font-size: 0.85em; margin: 4px 0 7px; text-align: center; }
-
-/* end .wp-caption */
-/* image gallery styles */
-/* end .gallery */
-/* gallery caption styles */
-.tags { margin: 0; }
+#content {
+  /* end .hentry */
+  /* want to style individual post classes? Booya! */
+  /* post by id (i.e. post-3) */
+  /* general post style */
+  /* general article on a page style */
+  /* general style on an attatchment */
+  /* sticky post style */
+  /* hentry class */
+  /* style by category (i.e. category-videos) */
+  /* style by tag (i.e. tag-news) */
+  /* post meta */
+  /* entry content */
+  /* end .entry-content */
+  /* end .wp-caption */
+  /* image gallery styles */
+  /* end .gallery */
+  /* gallery caption styles */ }
+  #content .hentry {
+    margin-bottom: 1em;
+    background: white;
+    padding: 1em; }
+    #content .hentry header {
+      margin-bottom: 1em; }
+    #content .hentry footer p {
+      margin: 0; }
+  #content .single-title,
+  #content .page-title,
+  #content .entry-title {
+    margin: 0; }
+  #content .byline {
+    color: #eaedf2;
+    font-style: italic;
+    margin: 0; }
+  #content .entry-content {
+    /*
+    image alignment on a screen this size may be
+    a bit difficult. It's set to start aligning
+    and floating images at the next breakpoint,
+    but it's up to you. Feel free to change it up.
+    */ }
+    #content .entry-content p {
+      margin: 0 0 1em; }
+    #content .entry-content table {
+      width: 100%;
+      border: 1px solid #eaedf2;
+      margin-bottom: 1.5em; }
+      #content .entry-content table caption {
+        margin: 0 0 7px;
+        font-size: 0.75em;
+        color: #eaedf2;
+        text-transform: uppercase;
+        letter-spacing: 1px; }
+    #content .entry-content tr {
+      border-bottom: 1px solid #eaedf2; }
+      #content .entry-content tr:nth-child(even) {
+        background-color: #f8f9fa; }
+    #content .entry-content td {
+      padding: 7px;
+      border-right: 1px solid #eaedf2; }
+      #content .entry-content td:last-child {
+        border-right: 0; }
+    #content .entry-content th {
+      background-color: #f8f9fa;
+      border-bottom: 1px solid #eaedf2;
+      border-right: 1px solid #eaedf2; }
+      #content .entry-content th:last-child {
+        border-right: 0; }
+    #content .entry-content blockquote {
+      margin: 0 0 1.5em 0.75em;
+      padding: 0 0 0 0.75em;
+      border-left: 3px solid #2980b9;
+      font-style: italic;
+      color: #eaedf2; }
+    #content .entry-content dd {
+      margin-left: 0;
+      font-size: 0.9em;
+      color: #787878;
+      margin-bottom: 1.5em; }
+    #content .entry-content img {
+      margin: 0 0 1.5em 0;
+      max-width: 100%;
+      height: auto; }
+    #content .entry-content .size-auto,
+    #content .entry-content .size-full,
+    #content .entry-content .size-large,
+    #content .entry-content .size-medium,
+    #content .entry-content .size-thumbnail {
+      max-width: 100%;
+      height: auto; }
+    #content .entry-content pre {
+      background: #323944;
+      color: #f8f9fa;
+      font-size: 0.9em;
+      padding: 1.5em;
+      margin: 0 0 1.5em;
+      border-radius: 3px; }
+  #content .wp-caption {
+    max-width: 100%;
+    background: #eee;
+    padding: 5px;
+    /* images inside wp-caption */ }
+    #content .wp-caption img {
+      max-width: 100%;
+      margin-bottom: 0;
+      width: 100%; }
+    #content .wp-caption p.wp-caption-text {
+      font-size: 0.85em;
+      margin: 4px 0 7px;
+      text-align: center; }
+  #content .tags {
+    margin: 0; }
 
 /******************************************************************
 PAGE NAVI STYLES
 ******************************************************************/
-.pagination, .wp-prev-next { margin: 1.5em 0; }
+.pagination,
+.wp-prev-next {
+  margin: 1.5em 0; }
 
-.pagination { text-align: center; }
-.pagination ul { display: inline-block; background-color: white; white-space: nowrap; padding: 0; clear: both; border-radius: 3px; }
-.pagination li { padding: 0; margin: 0; float: left; display: inline; overflow: hidden; border-right: 1px solid #eaedf2; }
-.pagination a, .pagination span { margin: 0; text-decoration: none; padding: 0; line-height: 1em; font-size: 1em; font-weight: normal; padding: 0.75em; min-width: 1em; display: block; color: #2980b9; }
-.pagination a:hover, .pagination a:focus, .pagination span:hover, .pagination span:focus { background-color: #2980b9; color: white; }
-.pagination .current { cursor: default; color: #5c6b80; }
-.pagination .current:hover, .pagination .current:focus { background-color: white; color: #5c6b80; }
+.pagination {
+  text-align: center; }
+  .pagination ul {
+    display: inline-block;
+    background-color: white;
+    white-space: nowrap;
+    padding: 0;
+    clear: both;
+    border-radius: 3px; }
+  .pagination li {
+    padding: 0;
+    margin: 0;
+    float: left;
+    display: inline;
+    overflow: hidden;
+    border-right: 1px solid #eaedf2; }
+  .pagination a, .pagination span {
+    margin: 0;
+    text-decoration: none;
+    padding: 0;
+    line-height: 1em;
+    font-size: 1em;
+    font-weight: normal;
+    padding: 0.75em;
+    min-width: 1em;
+    display: block;
+    color: #2980b9; }
+    .pagination a:hover, .pagination a:focus, .pagination span:hover, .pagination span:focus {
+      background-color: #2980b9;
+      color: white; }
+  .pagination .current {
+    cursor: default;
+    color: #323944; }
+    .pagination .current:hover, .pagination .current:focus {
+      background-color: white;
+      color: #323944; }
 
 /* end .bones_page_navi */
 /* fallback previous & next links */
-.wp-prev-next .prev-link { float: left; }
-.wp-prev-next .next-link { float: right; }
+.wp-prev-next .prev-link {
+  float: left; }
+.wp-prev-next .next-link {
+  float: right; }
 
 /* end .wp-prev-next */
 /******************************************************************
 COMMENT STYLES
 ******************************************************************/
 /* h3 comment title */
-#comments-title { padding: 0.75em; margin: 0; border-top: 1px solid #f8f9fa; /* number of comments span */ }
+#comments-title {
+  padding: 0.75em;
+  margin: 0;
+  border-top: 1px solid #f8f9fa;
+  /* number of comments span */ }
 
-.commentlist { margin: 0; list-style-type: none; }
+.commentlist {
+  margin: 0;
+  list-style-type: none; }
 
-.comment { position: relative; clear: both; overflow: hidden; padding: 1.5em; border-bottom: 1px solid #f8f9fa; /* vcard */ /* end .commentlist .vcard */ /* end children */ /* general comment classes */ }
-.comment .comment-author { padding: 7px; border: 0; }
-.comment .vcard { margin-left: 50px; }
-.comment .vcard cite.fn { font-weight: 700; font-style: normal; }
-.comment .vcard time { display: block; font-size: 0.9em; font-style: italic; }
-.comment .vcard time a { color: #9fa6b4; text-decoration: none; }
-.comment .vcard time a:hover { text-decoration: underline; }
-.comment .vcard .avatar { position: absolute; left: 16px; border-radius: 50%; }
-.comment:last-child { margin-bottom: 0; }
-.comment .children { margin: 0; /* variations */ /* change number for different depth */ }
-.comment[class*=depth-] { margin-top: 1.1em; }
-.comment.depth-1 { margin-left: 0; margin-top: 0; }
-.comment:not(.depth-1) { margin-top: 0; margin-left: 7px; padding: 7px; }
-.comment.odd { background-color: white; }
-.comment.even { background: #f8f9fa; }
+.comment {
+  position: relative;
+  clear: both;
+  overflow: hidden;
+  padding: 1.5em;
+  border-bottom: 1px solid #f8f9fa;
+  /* vcard */
+  /* end .commentlist .vcard */
+  /* end children */
+  /* general comment classes */ }
+  .comment .comment-author {
+    padding: 7px;
+    border: 0; }
+  .comment .vcard {
+    margin-left: 50px; }
+    .comment .vcard cite.fn {
+      font-weight: 700;
+      font-style: normal; }
+    .comment .vcard time {
+      display: block;
+      font-size: 0.9em;
+      font-style: italic; }
+      .comment .vcard time a {
+        color: #eaedf2;
+        text-decoration: none; }
+        .comment .vcard time a:hover {
+          text-decoration: underline; }
+    .comment .vcard .avatar {
+      position: absolute;
+      left: 16px;
+      border-radius: 50%; }
+  .comment:last-child {
+    margin-bottom: 0; }
+  .comment .children {
+    margin: 0;
+    /* variations */
+    /* change number for different depth */ }
+  .comment[class*=depth-] {
+    margin-top: 1.1em; }
+  .comment.depth-1 {
+    margin-left: 0;
+    margin-top: 0; }
+  .comment:not(.depth-1) {
+    margin-top: 0;
+    margin-left: 7px;
+    padding: 7px; }
+  .comment.odd {
+    background-color: white; }
+  .comment.even {
+    background: #f8f9fa; }
 
 /* comment meta */
 /* comment content */
-.comment_content p { margin: 0.7335em 0 1.5em; font-size: 1em; line-height: 1.5em; }
+.comment_content p {
+  margin: 0.7335em 0 1.5em;
+  font-size: 1em;
+  line-height: 1.5em; }
 
 /* end .commentlist .comment_content */
 /* comment reply link */
-.comment-reply-link { font-size: 0.9em; float: right; }
+.comment-reply-link {
+  font-size: 0.9em;
+  float: right; }
 
 /* end .commentlist .comment-reply-link */
 /* edit comment link */
-.comment-edit-link { font-style: italic; margin: 0 7px; text-decoration: none; font-size: 0.9em; }
+.comment-edit-link {
+  font-style: italic;
+  margin: 0 7px;
+  text-decoration: none;
+  font-size: 0.9em; }
 
 /******************************************************************
 COMMENT FORM STYLES
 ******************************************************************/
-.comment-respond { padding: 1.5em; border-top: 1px solid #f8f9fa; }
+.comment-respond {
+  padding: 1.5em;
+  border-top: 1px solid #f8f9fa; }
 
-#reply-title { margin: 0; }
+#reply-title {
+  margin: 0; }
 
-.logged-in-as { color: #9fa6b4; font-style: italic; margin: 0; }
-.logged-in-as a { color: #5c6b80; }
+.logged-in-as {
+  color: #eaedf2;
+  font-style: italic;
+  margin: 0; }
+  .logged-in-as a {
+    color: #323944; }
 
-.comment-form-comment { margin: 1.5em 0 0.75em; }
+.comment-form-comment {
+  margin: 1.5em 0 0.75em; }
 
-.form-allowed-tags { padding: 1.5em; background-color: #f8f9fa; font-size: 0.9em; }
+.form-allowed-tags {
+  padding: 1.5em;
+  background-color: #f8f9fa;
+  font-size: 0.9em; }
 
 /* comment submit button */
-#submit { float: right; font-size: 1em; }
+#submit {
+  float: right;
+  font-size: 1em; }
 
 /* comment form title */
-#comment-form-title { margin: 0 0 1.1em; }
+#comment-form-title {
+  margin: 0 0 1.1em; }
 
 /* cancel comment reply link */
 /* logged in comments */
 /* allowed tags */
-#allowed_tags { margin: 1.5em 10px 0.7335em 0; }
+#allowed_tags {
+  margin: 1.5em 10px 0.7335em 0; }
 
 /* no comments */
-.nocomments { margin: 0 20px 1.1em; }
+.nocomments {
+  margin: 0 20px 1.1em; }
 
 /*********************
 SIDEBARS & ASIDES
 *********************/
-.widget ul li { /* deep nesting */ }
+.widget {
+  background: white; }
+  .widget ul li {
+    /* deep nesting */ }
 
-.no-widgets { background-color: white; padding: 1.5em; text-align: center; border: 1px solid #cccccc; border-radius: 2px; margin-bottom: 1.5em; }
+.no-widgets {
+  background-color: white;
+  padding: 1.5em;
+  text-align: center;
+  border-radius: 2px;
+  margin-bottom: 1.5em; }
 
 /*********************
 FOOTER STYLES
 *********************/
-.footer { clear: both; background-color: #323944; color: #f8f9fa; }
+.footer {
+  clear: both; }
 
 /*
 if you checked out the link above:
@@ -891,33 +1992,84 @@ view.
 /**************
 NAVIGATAUR MENU - condensed
 **************/
-#toggle { display: none; }
+#toggle {
+  display: none; }
 
-.toggle { z-index: 3; display: block; position: relative; cursor: pointer; -webkit-touch-callout: none; -webkit-user-select: none; user-select: none; color: white; margin-top: -30px; /* adjust depending on your font */ }
-.toggle:after { font-family: "FontAwesome"; content: "\f039"; display: block; padding: 8px 20px; text-align: center; font-size: 2em; right: 0; bottom: 0; position: absolute; -webkit-transition: background 0.5s linear; transition: background 0.5s linear; }
-.toggle:hover:after { background: #164666; }
+.toggle {
+  z-index: 3;
+  display: block;
+  position: relative;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+  color: white;
+  margin-top: -30px;
+  /* adjust depending on your font */ }
+  .toggle:after {
+    font-family: "FontAwesome";
+    content: "\f039";
+    display: block;
+    padding: 8px 20px;
+    text-align: center;
+    font-size: 2em;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    -webkit-transition: background 0.5s linear;
+    transition: background 0.5s linear; }
+  .toggle:hover:after {
+    background: #164666; }
 
-#toggle:checked + .toggle:after { font-family: "FontAwesome"; content: "\f00d"; }
+#toggle:checked + .toggle:after {
+  font-family: "FontAwesome";
+  content: "\f00d"; }
 
-#toggle:checked ~ .top-nav { display: block; opacity: 1; -webkit-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; max-height: 900px; }
+#toggle:checked ~ .top-nav {
+  display: block;
+  opacity: 1;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  max-height: 900px; }
 
-.top-nav { margin: 0; -webkit-transition: all 0.9s ease-in-out; transition: all 0.9s ease-in-out; /* rules below are necessary to navigataur, integrate in your .nav class */ opacity: 0; max-height: 0px; overflow: hidden; /* end .menu li */ /* highlight current page */ /* end current highlighters */ }
-.top-nav li { /*
-so you really have to rethink your dropdowns for mobile.
-you don't want to have it expand too much because the
-screen is so small. How you manage your menu should
-depend on the project. Here's some great info on it:
-http://www.alistapart.com/articles/organizing-mobile/
-*/ }
-.top-nav li a { display: block; text-decoration: none; padding: 5px 10px; border-top: 1px solid #eaedf2; /*
-remember this is for mobile ONLY, so there's no need
-to even declare hover styles here, you can do it in
-the style.scss file where it's relevant. We want to
-keep this file as small as possible!
-*/ }
-.top-nav li a:hover, .top-nav li a:focus { background-color: #eaedf2; }
-.top-nav li ul.sub-menu, .top-nav li ul.children { margin: 0; }
-.top-nav li ul.sub-menu li a, .top-nav li ul.children li a { padding-left: 30px; }
+.top-nav {
+  margin: 0;
+  -webkit-transition: all 0.9s ease-in-out;
+  transition: all 0.9s ease-in-out;
+  /* rules below are necessary to navigataur, integrate in your .nav class */
+  opacity: 0;
+  max-height: 0px;
+  overflow: hidden;
+  /* end .menu li */
+  /* highlight current page */
+  /* end current highlighters */ }
+  .top-nav li {
+    /*
+    so you really have to rethink your dropdowns for mobile.
+    you don't want to have it expand too much because the
+    screen is so small. How you manage your menu should
+    depend on the project. Here's some great info on it:
+    http://www.alistapart.com/articles/organizing-mobile/
+    */ }
+    .top-nav li a {
+      display: block;
+      text-decoration: none;
+      padding: 5px 10px;
+      border-top: 1px solid #eaedf2;
+      /*
+      remember this is for mobile ONLY, so there's no need
+      to even declare hover styles here, you can do it in
+      the style.scss file where it's relevant. We want to
+      keep this file as small as possible!
+      */ }
+      .top-nav li a:hover, .top-nav li a:focus {
+        background-color: #eaedf2; }
+    .top-nav li ul.sub-menu,
+    .top-nav li ul.children {
+      margin: 0; }
+      .top-nav li ul.sub-menu li a,
+      .top-nav li ul.children li a {
+        padding-left: 30px; }
 
 /*********************
 LARGER MOBILE DEVICES
@@ -925,51 +2077,153 @@ This is for devices like the Galaxy Note or something that's
 larger than an iPhone but smaller than a tablet. Let's call them
 tweeners.
 *********************/
-@media only screen and (min-width: 481px) { /****************************************************************** Site Name: Author:  Stylesheet: 481px and Up Stylesheet  This stylesheet is loaded for larger devices. It's set to 481px because at 480px it would load on a landscaped iPhone. This isn't ideal because then you would be loading all those extra styles on that same mobile connection.  A word of warning. This size COULD be a larger mobile device, so you still want to keep it pretty light and simply expand upon your base.scss styles.  *****************************************************************/
-  /* IMPORTANT NOTE ABOUT SASS 3.3 & UP You can't use @extend within media queries anymore, so just be aware that if you drop them in here, they won't work. */
-  /********************* NAVIGATION STYLES ********************/
+@media only screen and (min-width: 481px) {
+  /******************************************************************
+  Site Name:
+  Author:
+  
+  Stylesheet: 481px and Up Stylesheet
+  
+  This stylesheet is loaded for larger devices. It's set to
+  481px because at 480px it would load on a landscaped iPhone.
+  This isn't ideal because then you would be loading all those
+  extra styles on that same mobile connection.
+  
+  A word of warning. This size COULD be a larger mobile device,
+  so you still want to keep it pretty light and simply expand
+  upon your base.scss styles.
+  
+  ******************************************************************/
+  /*
+  IMPORTANT NOTE ABOUT SASS 3.3 & UP
+  You can't use @extend within media queries
+  anymore, so just be aware that if you drop
+  them in here, they won't work.
+  */
+  /*********************
+  NAVIGATION STYLES
+  *********************/
   /* .menu is clearfixed inside mixins.scss */
-  .menu { /* end .menu ul */ }
-  .menu ul { /* end .menu ul li */ /* highlight current page */ /* end current highlighters */ }
-  .menu ul li { /*
-plan your menus and drop-downs wisely.
-*/ }
-  .menu ul li a { /*
-you can use hover styles here even though this size
-has the possibility of being a mobile device.
-*/ }
+  .menu {
+    /* end .menu ul */ }
+    .menu ul {
+      /* end .menu ul li */
+      /* highlight current page */
+      /* end current highlighters */ }
+      .menu ul li {
+        /*
+        plan your menus and drop-downs wisely.
+        */ }
+        .menu ul li a {
+          /*
+          you can use hover styles here even though this size
+          has the possibility of being a mobile device.
+          */ }
+
   /* end .menu */
-  /********************* POSTS & CONTENT STYLES ********************/
+  /*********************
+  POSTS & CONTENT STYLES
+  *********************/
   /* entry content */
-  .entry-content { /* at this larger size, we can start to align images */ }
-  .entry-content .alignleft, .entry-content img.alignleft { margin-right: 1.5em; display: inline; float: left; }
-  .entry-content .alignright, .entry-content img.alignright { margin-left: 1.5em; display: inline; float: right; }
-  .entry-content .aligncenter, .entry-content img.aligncenter { margin-right: auto; margin-left: auto; display: block; clear: both; }
+  .entry-content {
+    /* at this larger size, we can start to align images */ }
+    .entry-content .alignleft, .entry-content img.alignleft {
+      margin-right: 1.5em;
+      display: inline;
+      float: left; }
+    .entry-content .alignright, .entry-content img.alignright {
+      margin-left: 1.5em;
+      display: inline;
+      float: right; }
+    .entry-content .aligncenter, .entry-content img.aligncenter {
+      margin-right: auto;
+      margin-left: auto;
+      display: block;
+      clear: both; }
+
   /* end .entry-content */
-  /********************* FOOTER STYLES ********************/
-  /* check your menus here. do they look good? do they need tweaking? */
+  /*********************
+  FOOTER STYLES
+  *********************/
+  /*
+  check your menus here. do they look good?
+  do they need tweaking?
+  */
   /* end .footer-links */
-  /************** NAVIGATAUR MENU - full width *************/
-  #toggle, .toggle { display: none; }
-  #toggle:checked ~ .top-nav { border-top: none; }
-  .top-nav { z-index: 2; line-height: 40px; /* rules below are necessary to navigataur, integrate in your .nav class */ opacity: 1; height: auto; overflow: visible; margin-top: 2em; /* adjust to keep text aligned to Logo */ /* end .menu ul li */ /* highlight current page */ /* end current highlighters */ }
-  .top-nav li { float: right; /* adjust alignment */ position: relative; /*
-plan your menus and drop-downs wisely.
-*/ /* showing sub-menus */ }
-  .top-nav li a { border: 0; height: 42px; -webkit-transition: background 0.5s ease-in-out; transition: background 0.5s ease-in-out; padding: 2px 10px; /*
-you can use hover styles here even though this size
-has the possibility of being a mobile device.
-*/ }
-  .top-nav li a:hover, .top-nav li a:focus { background: #f7f8fa; color: #5c6b80 !important; text-decoration: none; }
-  .top-nav li ul.sub-menu, .top-nav li ul.children { margin-top: 0; position: absolute; overflow: hidden; visibility: hidden; z-index: 9001; background: rgba(255, 255, 255, 0.8); /* highlight sub-menu current page */ }
-  .top-nav li ul.sub-menu li, .top-nav li ul.children li { /*
-if you need to go deeper, go nuts
-just remember deeper menus suck
-for usability. k, bai.
-*/ }
-  .top-nav li ul.sub-menu li a, .top-nav li ul.children li a { padding-left: 10px; border-right: 0; display: block; min-width: 250px; }
-  .top-nav li ul.sub-menu li:last-child a, .top-nav li ul.children li:last-child a { border-bottom: 0; }
-  .top-nav li:hover ul { top: auto; overflow: visible; visibility: visible; display: block; }
+  /**************
+  NAVIGATAUR MENU - full width
+  **************/
+  #toggle, .toggle {
+    display: none; }
+
+  #toggle:checked ~ .top-nav {
+    border-top: none; }
+
+  .top-nav {
+    z-index: 2;
+    line-height: 40px;
+    /* rules below are necessary to navigataur, integrate in your .nav class */
+    opacity: 1;
+    height: auto;
+    overflow: visible;
+    margin-top: 2em;
+    /* adjust to keep text aligned to Logo */
+    /* end .menu ul li */
+    /* highlight current page */
+    /* end current highlighters */ }
+    .top-nav li {
+      float: right;
+      /* adjust alignment */
+      position: relative;
+      /*
+      plan your menus and drop-downs wisely.
+      */
+      /* showing sub-menus */ }
+      .top-nav li a {
+        border: 0;
+        height: 42px;
+        -webkit-transition: background 0.5s ease-in-out;
+        transition: background 0.5s ease-in-out;
+        padding: 2px 10px;
+        /*
+        you can use hover styles here even though this size
+        has the possibility of being a mobile device.
+        */ }
+        .top-nav li a:hover, .top-nav li a:focus {
+          background: #f7f8fa;
+          color: #323944 !important;
+          text-decoration: none; }
+      .top-nav li ul.sub-menu,
+      .top-nav li ul.children {
+        margin-top: 0;
+        position: absolute;
+        overflow: hidden;
+        visibility: hidden;
+        z-index: 9001;
+        background: rgba(255, 255, 255, 0.8);
+        /* highlight sub-menu current page */ }
+        .top-nav li ul.sub-menu li,
+        .top-nav li ul.children li {
+          /*
+          if you need to go deeper, go nuts
+          just remember deeper menus suck
+          for usability. k, bai.
+          */ }
+          .top-nav li ul.sub-menu li a,
+          .top-nav li ul.children li a {
+            padding-left: 10px;
+            border-right: 0;
+            display: block;
+            min-width: 250px; }
+          .top-nav li ul.sub-menu li:last-child a,
+          .top-nav li ul.children li:last-child a {
+            border-bottom: 0; }
+      .top-nav li:hover ul {
+        top: auto;
+        overflow: visible;
+        visibility: visible;
+        display: block; }
+
   /* end .nav */ }
 /*********************
 TABLET & SMALLER LAPTOPS
@@ -977,39 +2231,107 @@ This is the average viewing window. So Desktops, Laptops, and
 in general anyone not viewing on a mobile device. Here's where
 you can add resource intensive styles.
 *********************/
-@media only screen and (min-width: 768px) { /****************************************************************** Site Name: Author:  Stylesheet: Tablet & Small Desktop Stylesheet  Here's where you can start getting into the good stuff. This size will work on iPads, other tablets, and desktops. So you can start working with more styles, background images, and other resources. You'll also notice the grid starts to come into play. Have fun!  *****************************************************************/
-  /********************* GENERAL STYLES ********************/
-  /********************* LAYOUT & GRID STYLES ********************/
-  .wrap { width: 760px; }
-  /********************* HEADER STYLES ********************/
-  /********************* NAVIGATION STYLES ********************/
-  .nav { border: 0; /* end .menu ul li */ /* highlight current page */ /* end current highlighters */ }
-  .nav ul { background: #323944; margin-top: 0; }
-  .nav li { float: left; position: relative; /*
-plan your menus and drop-downs wisely.
-*/ /* showing sub-menus */ }
-  .nav li a { border-bottom: 0; /*
-you can use hover styles here even though this size
-has the possibility of being a mobile device.
-*/ }
-  .nav li a:hover, .nav li a:focus { color: white; text-decoration: underline; }
-  .nav li ul.sub-menu, .nav li ul.children { margin-top: 0; border: 1px solid #ccc; border-top: 0; position: absolute; visibility: hidden; z-index: 8999; /* highlight sub-menu current page */ }
-  .nav li ul.sub-menu li, .nav li ul.children li { /*
-if you need to go deeper, go nuts
-just remember deeper menus suck
-for usability. k, bai.
-*/ }
-  .nav li ul.sub-menu li a, .nav li ul.children li a { padding-left: 10px; border-right: 0; display: block; width: 180px; border-bottom: 1px solid #ccc; }
-  .nav li ul.sub-menu li:last-child a, .nav li ul.children li:last-child a { border-bottom: 0; }
-  .nav li ul.sub-menu li ul, .nav li ul.children li ul { top: 0; left: 100%; }
-  .nav li:hover > ul { top: auto; visibility: visible; }
+@media only screen and (min-width: 768px) {
+  /******************************************************************
+  Site Name:
+  Author:
+  
+  Stylesheet: Tablet & Small Desktop Stylesheet
+  
+  Here's where you can start getting into the good stuff.
+  This size will work on iPads, other tablets, and desktops.
+  So you can start working with more styles, background images,
+  and other resources. You'll also notice the grid starts to
+  come into play. Have fun!
+  
+  ******************************************************************/
+  /*********************
+  GENERAL STYLES
+  *********************/
+  /*********************
+  LAYOUT & GRID STYLES
+  *********************/
+  .wrap {
+    width: 760px; }
+
+  /*********************
+  HEADER STYLES
+  *********************/
+  /*********************
+  NAVIGATION STYLES
+  *********************/
+  .nav {
+    border: 0;
+    /* end .menu ul li */
+    /* highlight current page */
+    /* end current highlighters */ }
+    .nav ul {
+      background: #323944;
+      margin-top: 0; }
+    .nav li {
+      float: left;
+      position: relative;
+      /*
+      plan your menus and drop-downs wisely.
+      */
+      /* showing sub-menus */ }
+      .nav li a {
+        border-bottom: 0;
+        /*
+        you can use hover styles here even though this size
+        has the possibility of being a mobile device.
+        */ }
+        .nav li a:hover, .nav li a:focus {
+          color: white;
+          text-decoration: underline; }
+      .nav li ul.sub-menu,
+      .nav li ul.children {
+        margin-top: 0;
+        border: 1px solid #ccc;
+        border-top: 0;
+        position: absolute;
+        visibility: hidden;
+        z-index: 8999;
+        /* highlight sub-menu current page */ }
+        .nav li ul.sub-menu li,
+        .nav li ul.children li {
+          /*
+          if you need to go deeper, go nuts
+          just remember deeper menus suck
+          for usability. k, bai.
+          */ }
+          .nav li ul.sub-menu li a,
+          .nav li ul.children li a {
+            padding-left: 10px;
+            border-right: 0;
+            display: block;
+            width: 180px;
+            border-bottom: 1px solid #ccc; }
+          .nav li ul.sub-menu li:last-child a,
+          .nav li ul.children li:last-child a {
+            border-bottom: 0; }
+          .nav li ul.sub-menu li ul,
+          .nav li ul.children li ul {
+            top: 0;
+            left: 100%; }
+      .nav li:hover > ul {
+        top: auto;
+        visibility: visible; }
+
   /* end .nav */
-  /********************* SIDEBARS & ASIDES ********************/
-  .sidebar { margin-top: 2.2em; }
-  .widgettitle { margin-bottom: 0.75em; }
-  .widget { padding: 0 10px; margin: 2.2em 0; }
-  .widget ul li { margin-bottom: 0.75em; /* deep nesting */ }
-  .widget ul li ul { margin-top: 0.75em; padding-left: 1em; }
+  /*********************
+  SIDEBARS & ASIDES
+  *********************/
+  .widget {
+    padding: 1em;
+    margin-bottom: 1em; }
+    .widget ul li {
+      margin-bottom: 0.75em;
+      /* deep nesting */ }
+      .widget ul li ul {
+        margin-top: 0.75em;
+        padding-left: 1em; }
+
   /* links widget */
   /* meta widget */
   /* pages widget */
@@ -1020,15 +2342,25 @@ for usability. k, bai.
   /* category widget */
   /* recent-comments widget */
   /* search widget */
-  .widget_search input { width: 90%; }
+  .widget_search input {
+    width: 90%; }
+
   /* text widget */
-  /********************* FOOTER STYLES ********************/
-  /* you'll probably need to do quite a bit of overriding here if you styled them for mobile. Make sure to double check these! */
-  .footer-links ul li { /*
-be careful with the depth of your menus.
-it's very rare to have multi-depth menus in
-the footer.
-*/ }
+  /*********************
+  FOOTER STYLES
+  *********************/
+  /*
+  you'll probably need to do quite a bit
+  of overriding here if you styled them for
+  mobile. Make sure to double check these!
+  */
+  .footer-links ul li {
+    /*
+    be careful with the depth of your menus.
+    it's very rare to have multi-depth menus in
+    the footer.
+    */ }
+
   /* end .footer-links */ }
 /*********************
 DESKTOP
@@ -1036,38 +2368,145 @@ This is the average viewing window. So Desktops, Laptops, and
 in general anyone not viewing on a mobile device. Here's where
 you can add resource intensive styles.
 *********************/
-@media only screen and (min-width: 1030px) { /****************************************************************** Site Name: Author:  Stylesheet: Desktop Stylsheet  This is the desktop size. It's larger than an iPad so it will only be seen on the Desktop.  *****************************************************************/
-  .wrap { width: 1040px; } }
+@media only screen and (min-width: 1030px) {
+  /******************************************************************
+  Site Name:
+  Author:
+  
+  Stylesheet: Desktop Stylsheet
+  
+  This is the desktop size. It's larger than an iPad so it will only
+  be seen on the Desktop.
+  
+  ******************************************************************/
+  .wrap {
+    width: 1040px; } }
 /*********************
 LARGE VIEWING SIZE
 This is for the larger monitors and possibly full screen viewers.
 *********************/
-@media only screen and (min-width: 1240px) { /****************************************************************** Site Name:  Author:   Stylesheet: Super Large Monitor Stylesheet  You can add some advanced styles here if you like. This kicks in on larger screens.  *****************************************************************/ }
+@media only screen and (min-width: 1240px) {
+  /******************************************************************
+  Site Name: 
+  Author: 
+  
+  Stylesheet: Super Large Monitor Stylesheet
+  
+  You can add some advanced styles here if you like. This kicks in
+  on larger screens.
+  
+  ******************************************************************/ }
 /*********************
 RETINA (2x RESOLUTION DEVICES)
 This applies to the retina iPhone (4s) and iPad (2,3) along with
 other displays with a 2x resolution. You can also create a media
 query for retina AND a certain size if you want. Go Nuts.
 *********************/
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) { /****************************************************************** Site Name:  Author:   Stylesheet: Retina Screens & Devices Stylesheet  When handling retina screens you need to make adjustments, especially if you're not using font icons. Here you can add them in one neat place.  *****************************************************************/
-  /*   EXAMPLE  Let's say you have an image and you need to make sure it looks ok on retina screens. Let's say we have an icon which dimension are 24px x 24px. In your regular stylesheets, it would look something like this:  .icon { 	width: 24px; 	height: 24px; 	background: url(img/test.png) no-repeat; }  For retina screens, we have to make some adjustments, so that image doesn't look blurry. So, taking into account the image above and the dimensions, this is what we would put in our retina stylesheet:  .icon { 	background: url(img/test@2x.png) no-repeat; 	background-size: 24px 24px; }  So, you would create the same icon, but at double the resolution, meaning  it would be 48px x 48px. You'd name it the same, but with a @2x at the end (this is pretty standard practice). Set the background image so it matches the original dimensions and you are good to go.   */ }
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  /******************************************************************
+  Site Name: 
+  Author: 
+  
+  Stylesheet: Retina Screens & Devices Stylesheet
+  
+  When handling retina screens you need to make adjustments, especially
+  if you're not using font icons. Here you can add them in one neat
+  place.
+  
+  ******************************************************************/
+  /* 
+  
+  EXAMPLE 
+  Let's say you have an image and you need to make sure it looks ok
+  on retina screens. Let's say we have an icon which dimension are
+  24px x 24px. In your regular stylesheets, it would look something
+  like this:
+  
+  .icon {
+  	width: 24px;
+  	height: 24px;
+  	background: url(img/test.png) no-repeat;
+  }
+  
+  For retina screens, we have to make some adjustments, so that image
+  doesn't look blurry. So, taking into account the image above and the
+  dimensions, this is what we would put in our retina stylesheet:
+  
+  .icon {
+  	background: url(img/test@2x.png) no-repeat;
+  	background-size: 24px 24px;
+  }
+  
+  So, you would create the same icon, but at double the resolution, meaning 
+  it would be 48px x 48px. You'd name it the same, but with a @2x at the end
+  (this is pretty standard practice). Set the background image so it matches
+  the original dimensions and you are good to go. 
+  
+  */ }
 /*********************
 PRINT STYLESHEET
 Feel free to customize this. Remember to add things that won't make
 sense to print at the bottom. Things like nav, ads, and forms should
 be set to display none.
 *********************/
-@media print { /****************************************************************** Site Name: Author:  Stylesheet: Print Stylesheet  This is the print stylesheet. There's probably not a lot of reasons to edit this stylesheet. If you want to though, go for it.  *****************************************************************/
-  * { background: transparent !important; color: black !important; text-shadow: none !important; filter: none !important; -ms-filter: none !important; }
-  a, a:visited { color: #444 !important; text-decoration: underline; }
-  a:after, a:visited:after { content: " (" attr(href) ")"; }
-  a abbr[title]:after, a:visited abbr[title]:after { content: " (" attr(title) ")"; }
-  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }
-  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
-  thead { display: table-header-group; }
-  tr, img { page-break-inside: avoid; }
-  img { max-width: 100% !important; }
-  @page { margin: 0.5cm; }
-  p, h2, h3 { orphans: 3; widows: 3; }
-  h2, h3 { page-break-after: avoid; }
-  .sidebar, .page-navigation, .wp-prev-next, .respond-form, nav { display: none; } }
+@media print {
+  /******************************************************************
+  Site Name:
+  Author:
+  
+  Stylesheet: Print Stylesheet
+  
+  This is the print stylesheet. There's probably not a lot
+  of reasons to edit this stylesheet. If you want to
+  though, go for it.
+  
+  ******************************************************************/
+  * {
+    background: transparent !important;
+    color: black !important;
+    text-shadow: none !important;
+    filter: none !important;
+    -ms-filter: none !important; }
+
+  a, a:visited {
+    color: #444 !important;
+    text-decoration: underline; }
+    a:after, a:visited:after {
+      content: " (" attr(href) ")"; }
+    a abbr[title]:after, a:visited abbr[title]:after {
+      content: " (" attr(title) ")"; }
+
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: ""; }
+
+  pre, blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid; }
+
+  thead {
+    display: table-header-group; }
+
+  tr, img {
+    page-break-inside: avoid; }
+
+  img {
+    max-width: 100% !important; }
+
+  @page {
+    margin: 0.5cm; }
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3; }
+
+  h2,
+  h3 {
+    page-break-after: avoid; }
+
+  .sidebar,
+  .page-navigation,
+  .wp-prev-next,
+  .respond-form,
+  nav {
+    display: none; } }

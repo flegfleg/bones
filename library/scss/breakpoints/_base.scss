@@ -20,7 +20,7 @@ body {
 	font-size: 100%;
 	line-height: 1.5;
 	color: $text-color;
-	background-color: $gray;
+	background-color: $light-gray;
   	-webkit-font-smoothing: antialiased;
   	-moz-osx-font-smoothing: grayscale;
 }
@@ -160,14 +160,11 @@ HEADER STYLES
 *********************/
 
 .header {
-	background-color: $black;
 }
 
 	#logo {
-		margin: 0.75em 0;
 
 		a {
-			color: $white;
 		}
 	}
 
@@ -191,9 +188,7 @@ and more scalable.
 
 		a {
 			display: block;
-			color: $white;
 			text-decoration: none;
-			padding: 0.75em;
 
 			/*
 			remember this is for mobile ONLY, so there's no need
@@ -259,25 +254,20 @@ POSTS & CONTENT STYLES
 *********************/
 
 #content {
-	margin-top: 1.5em;
-}
 
 		.hentry {
-			background-color: $white;
-			border-radius: 3px;
-			margin-bottom: 1.5em;
-			border: 1px solid $border-color;
+			margin-bottom: $padding;
+			background: $white;
+			padding: $padding;
 
 			header {
-				border-bottom: 1px solid $light-gray;
-				padding: 1.5em;
+				margin-bottom: $padding;
+
 			}
 
 			footer {
-				padding: 1.5em;
-				border-top: 1px solid $light-gray;
 
-				p {
+			p {
 					margin: 0;
 				}
 			}
@@ -319,10 +309,9 @@ POSTS & CONTENT STYLES
 
 		/* entry content */
 		.entry-content {
-			padding: 1.5em 1.5em 0;
 
 			p {
-				margin: 0 0 1.5em;
+				margin: 0 0 $padding;
 			}
 
 
@@ -390,7 +379,7 @@ POSTS & CONTENT STYLES
 			blockquote {
 				margin: 0 0 1.5em 0.75em;
 				padding: 0 0 0 0.75em;
-				border-left: 3px solid $blue;
+				border-left: 3px solid $highlight;
 				font-style: italic;
 				color: $meta-gray;
 
@@ -495,6 +484,8 @@ POSTS & CONTENT STYLES
 		margin: 0;
 	}
 
+}
+
 /******************************************************************
 PAGE NAVI STYLES
 ******************************************************************/
@@ -534,10 +525,10 @@ PAGE NAVI STYLES
       padding: 0.75em;
       min-width: 1em;
       display: block;
-      color: $blue;
+      color: $highlight;
 
       &:hover, &:focus {
-      	background-color: $blue;
+      	background-color: $highlight;
       	color: $white;
       }
     }
@@ -829,11 +820,13 @@ COMMENT FORM STYLES
 SIDEBARS & ASIDES
 *********************/
 
-.sidebar {}
+.sidebar {
+}
 
 	.widgettitle {}
 
 	.widget {
+			background: $white;
 
 		ul {
 
@@ -862,7 +855,6 @@ SIDEBARS & ASIDES
 		background-color: $white;
 		padding: 1.5em;
 		text-align: center;
-		border: 1px solid $border-color;
 		border-radius: 2px;
 		margin-bottom: 1.5em;
 	}
@@ -873,8 +865,7 @@ FOOTER STYLES
 
 .footer {
 	clear: both;
-	background-color: $black;
-	color: $light-gray;
+
 }
 
 	/*

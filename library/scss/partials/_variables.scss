@@ -17,44 +17,42 @@ Need help w/ choosing your colors? Try this site out:
 http://0to255.com/
 *********************/
 
+// Forms
+
 $alert-yellow:      #ebe16f;
 $alert-red:         #fbe3e4;
 $alert-green:       #e6efc2;
 $alert-blue:        #d5edf8;
+$disabled-gray:     #cfcfcf;
+
+
+// CI Colors
 
 $black:             #323944;
 $white:             #fff;
+$blue:               #2980b9;
+$tan:               #eceee5;
+$green:             #7dd667;
+
+
+// Boring grays
 
 $light-gray:        #f8f9fa;
 $gray:              #eaedf2;
-$text-color:        #5c6b80;
-$meta-gray:         #9fa6b4;
+$text-color:        $black;
+$meta-gray:         $gray;
 
-$tan:               #eceee5;
+// Elements
 
-$green:             #7dd667;
+$highlight:         $blue;
+$link-color:        $highlight;
+$link-hover:        darken($link-color, 20%);
 
-$bones-pink:        #f01d4f;
-$blue:              #2980b9;
-
-$link-color:        $bones-pink;
-$link-hover:        darken($link-color, 9%);
-
-$border-color:      #ccc;
-$disabled-gray:     #cfcfcf;
 
 
 /*********************
 PADDING/MARGIN
-Need help w/ choosing your colors? Try this site out:
-http://0to255.com/
 *********************/
 
 $padding:           1em;
 $margin:            0.5em;
-
-/*
-Here's a great tutorial on how to
-use color variables properly:
-http://sachagreif.com/sass-color-variables/
-*/
