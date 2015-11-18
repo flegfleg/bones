@@ -14,6 +14,8 @@
  * render_subnav
  * render_parent_title
  * render_all_thumbs
+ * 
+ * list_tags()
  *
  */ 
 
@@ -25,21 +27,27 @@
  * Get the featured image of the current page.
  * If no image is defined, use the fallback (front page image)
  *
- *@return path to image
+ *@return image tag or background
  */ 
-function get_featured_img() {
+function get_featured_img( $id = '', $size = 'large', $background = false ) {
   // get current page id
-  $page_id = get_queried_object_id();
+
+  if ( empty( $id ) ) {
+    $page_id = get_queried_object_id();
+  }
   $frontpage_id = get_option('page_on_front');
 
   if (has_post_thumbnail( $page_id ) ) {
     // get thumbnail
-    $pic = wp_get_attachment_image_src( get_post_thumbnail_id( $page_id ),  'full');
+    $pic = wp_get_attachment_image_src( get_post_thumbnail_id( $page_id ),  $size );
   } else {
-    $pic = wp_get_attachment_image_src( get_post_thumbnail_id( $frontpage_id ), 'full'); // home page pic as fallback
-    $pic = wp_get_attachment_image_src( get_post_thumbnail_id( $frontpage_id ), $size); // home page pic as fallback
+    $pic = wp_get_attachment_image_src( get_post_thumbnail_id( $frontpage_id ), $size ); // home page pic as fallback
   }
-  return 'style="background-image: url('.$pic[0].'); background-size: cover"';
+  if ( $background ) {
+    return 'style="background-image: url('.$pic[0].'); background-size: cover"';
+  } else {
+    return '<img src="' . $pic[0] . '">'; 
+  }
 }
 
 
@@ -130,4 +138,61 @@ function render_all_thumbs() {
       
     }
   }
+
+/**
+ * List all terms of given taxonomy
+ *
+ * @return html
+ */
+  function mm_list_tags( $taxonomy='themen_tag', $class='post_tags' ) {
+    
+
+    $args = array(
+        'orderby'           => 'name', 
+        'order'             => 'ASC',
+        'hide_empty'        => true, 
+        'exclude'           => array(), 
+        'exclude_tree'      => array(), 
+        'include'           => array(),
+        'number'            => '', 
+        'fields'            => 'all', 
+        'slug'              => '',
+        'parent'            => '',
+        'hierarchical'      => true, 
+        'child_of'          => 0,
+        'childless'         => false,
+        'get'               => '', 
+        'name__like'        => '',
+        'description__like' => '',
+        'pad_counts'        => false, 
+        'offset'            => '', 
+        'search'            => '', 
+        'cache_domain'      => 'core'
+    ); 
+
+    $terms = get_terms( $taxonomy, $args );
+
+    $is_tax = is_tax( $taxonomy ); 
+
+    $current_term_id = get_queried_object()->term_id;
+
+    $html = '<ul class="' . $class .'">';
+    foreach ( $terms as $term ) {
+
+      // var_dump($term);
+
+      $term_link = get_term_link( $term );
+      $term_name = $term->name ;   
+      $term_id = $term->term_id;
+      $class="";
+      if ( $term_id == $current_term_id) { $class="current"; }
+
+      $html .= '<li class="' . $class . '"><a href="' . $term_link . '" title="' . $term_name . '">';
+      $html .=  $term_name . '</a></li>';
+    }
+    $html .= '</ul>';
+    echo $html;
+}
+
+
 ?>
