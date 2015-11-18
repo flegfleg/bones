@@ -27,6 +27,17 @@ LAYOUT & GRID STYLES
 	width: 760px;
 }
 
+.bit-1 {
+	width: 33.33%;
+}
+.bit-2 {
+	width: 66.66%;
+}
+
+ .bit-half {
+    width: 50%;
+ }
+
 /*********************
 HEADER STYLES
 *********************/
@@ -35,6 +46,27 @@ HEADER STYLES
 
 	#logo {}
 
+/*********************
+CONTENT STYLES
+*********************/
+
+#content {
+
+	.grid {
+		div {
+			width: 33%;
+			float: left;
+		}
+		&.fullsize {
+			div {
+			width: 100%;
+			float: none;		
+
+		}
+		}
+	}
+
+}
 /*********************
 NAVIGATION STYLES
 *********************/
@@ -46,8 +78,6 @@ NAVIGATION STYLES
 		margin-top:0;
 	}
 	li {
-		float: left;
-		position: relative;
 
 		a {
 			border-bottom: 0;
@@ -57,8 +87,7 @@ NAVIGATION STYLES
 			has the possibility of being a mobile device.
 			*/
 			&:hover, &:focus {
-				color: $white;
-				text-decoration: underline;
+
 			}
 		}
 
