@@ -72,14 +72,54 @@ probably best not to use it. I mean, were you going to anyway? */
 
 /*********************
 ALPHA
+
+USAGE: @include alpha-attribute('background-color', rgba(#fff, 0.8), black);
+
+
 *********************/
 
-/*   @include alpha-attribute('background-color', rgba(#fff, 0.8), black); */
 @mixin alpha-attribute($attribute, $color, $background) {
   $percent: alpha($color) * 100%;
   $opaque: opacify($color, 1);
   $solid-color: mix($opaque, $background, $percent);
   #{$attribute}: $solid-color;
   #{$attribute}: $color;
+}
+
+
+/*********************
+ASPECT RATIO
+via https://css-tricks.com/snippets/sass/maintain-aspect-ratio-mixin/
+
+USAGE:   @include aspect-ratio(16, 9);
+
+*********************/
+
+
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+  > .inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+@mixin center-all() {
+  display: block;     
+  text-align: center;     
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
