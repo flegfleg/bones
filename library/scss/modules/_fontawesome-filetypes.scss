@@ -1,0 +1,39 @@
+/*
+FILE FORMAT ICONS
+
+Automatically adds File type icons to urls
+*/
+
+article a[href*="wp-content/uploads/"] { // this is a link to a file from the media library
+    &:before {
+    content: "\f016"; /* generic file icon */
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transform: translate(0, 0);
+    width: 20px;
+    text-align: right;
+    margin-right: 10px;
+    }
+    &[href$=".pdf"]:before { 
+        content: "\f1c1";
+    }    
+    &[href$=".zip"]:before { 
+        content: "\f1c6";
+    }
+    &[href$=".doc"]:before,
+    &[href$=".docx"]:before { 
+        content: "\f1c2"; 
+    }    
+    &[href$=".xls"]:before,
+    &[href$=".xlsx"]:before { 
+        content: "\f1c3";
+    }    
+    &[href$=".ppt"]:before,
+    &[href$=".pptx"]:before { 
+        content: "\f1c4";
+    }
+}
