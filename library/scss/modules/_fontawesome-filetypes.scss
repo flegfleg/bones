@@ -18,6 +18,10 @@ article a[href*="wp-content/uploads/"] { // this is a link to a file from the me
     text-align: right;
     margin-right: 10px;
     }
+    &[href$=".jpg"]:before,
+    &[href$=".png"]:before { 
+        content: none;
+    }  
     &[href$=".pdf"]:before { 
         content: "\f1c1";
     }    
