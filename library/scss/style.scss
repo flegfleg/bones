@@ -75,9 +75,15 @@ the other stylesheets. Remember, keep it light: Speed is Important.
 @import "breakpoints/base";
 
 
+/*********************
+MOBILE DEVICES - Navigation
+*********************/
+@media only screen and (max-width: 480px) {
+
 // import navigateur menu only on mobile 
 @import "modules/menu-mobile";
 
+} // end of media query
 
 /*********************
 LARGER MOBILE DEVICES

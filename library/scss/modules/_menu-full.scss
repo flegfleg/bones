@@ -6,35 +6,18 @@ NAVIGATAUR MENU - full width
 
 #toggle:checked ~ .top-nav {border-top:none;}
 
-.top-nav{
+ul.top-nav{
         z-index:2;
-        line-height:40px;
          /* rules below are necessary to navigataur, integrate in your .nav class */
         opacity:1;
-        height:auto;
-        overflow:visible;
-        margin-top: 2em; /* adjust to keep text aligned to Logo */
+        width: 100%;
+        display: block;
+        text-align: right;
+        margin: 0;
 
     li {
-        float: right; /* adjust alignment */
-        position: relative;
-
-        a {
-            border: 0;
-            height:42px;
-            @include transition(background 0.5s ease-in-out);
-            padding: 2px 10px;
-
-            /*
-            you can use hover styles here even though this size
-            has the possibility of being a mobile device.
-            */
-            &:hover, &:focus {
-                background:lighten($gray, 4%);
-                color: $text-color !important;
-                text-decoration: none;
-                }
-        }
+        display: inline-block;
+        margin-left: 2em;
 
         &:first-child {}
         &:last-child {}
@@ -107,4 +90,13 @@ NAVIGATAUR MENU - full width
         a {}
     }  /* end current highlighters */
 
-} /* end .nav */
+} /* end .top-nav */
+
+ul.footer-nav {
+        text-align: right;
+        margin: 0;
+    li {
+        display: inline-block;
+        margin-left: 2em;
+    }
+}

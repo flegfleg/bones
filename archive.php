@@ -4,7 +4,7 @@
 
 				<div id="inner-content" class="wrap cf">
 
-						<main id="main" class="bit-2" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+						<main id="main" class="bit-3" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
 							<?php
 							the_archive_title( '<h1 class="page-title">', '</h1>' );
@@ -13,7 +13,7 @@
 							
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article">
+							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf box' ); ?> role="article">
 
 								<header class="entry-header article-header">
 

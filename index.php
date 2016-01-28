@@ -5,11 +5,11 @@
 
 				<div id="inner-content" class="wrap cf frame">
 						
-						<main id="main" class="bit-2" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+						<main id="main" class="bit-3" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article">
+							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf box' ); ?> role="article">
 
 								<header class="article-header">
 
@@ -50,7 +50,7 @@
 
 							<?php else : ?>
 
-									<article id="post-not-found" class="hentry cf">
+									<article id="post-not-found" class="hentry cf box">
 											<header class="article-header">
 												<h1><?php _e( 'Oops, Post Not Found!', 'bonestheme' ); ?></h1>
 										</header>

@@ -28,12 +28,17 @@ LAYOUT & GRID STYLES
 }
 
 .bit-1 {
-	width: 33.33%;
+	width: 25%;
 }
 .bit-2 {
-	width: 66.66%;
+	width: 50%;
 }
-
+.bit-3 {
+	width: 75%;
+}
+.bit-4 {
+	width: 100%;
+}
  .bit-half {
     width: 50%;
  }
@@ -52,19 +57,6 @@ CONTENT STYLES
 
 #content {
 
-	.grid {
-		div {
-			width: 33%;
-			float: left;
-		}
-		&.fullsize {
-			div {
-			width: 100%;
-			float: none;		
-
-		}
-		}
-	}
 
 }
 /*********************
@@ -74,7 +66,6 @@ NAVIGATION STYLES
 .nav {
 	border: 0;
 	ul {
-		background:$black;
 		margin-top:0;
 	}
 	li {
@@ -177,12 +168,10 @@ SIDEBARS & ASIDES
 	}
 
 	.widget {
-		padding: $padding;
 		margin-bottom: $padding;
 
 		ul {
 			li {
-				margin-bottom: 0.75em;
 
 				&:first-child {}
 				&:last-child {}
