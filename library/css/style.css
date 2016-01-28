@@ -847,12 +847,14 @@ MOBILE DEVICES - Navigation
 *********************/
 @media only screen and (max-width: 480px) { /************** NAVIGATAUR MENU - condensed *************/
   #toggle { display: none; }
-  .toggle { z-index: 3; display: block; position: relative; cursor: pointer; -webkit-touch-callout: none; -webkit-user-select: none; user-select: none; color: white; margin-top: -30px; /* adjust depending on your font */ }
-  .toggle:after { font-family: "FontAwesome"; content: "\f039"; display: block; padding: 8px 20px; text-align: center; font-size: 2em; right: 0; bottom: 0; position: absolute; -webkit-transition: background 0.5s linear; transition: background 0.5s linear; }
-  .toggle:hover:after { background: #164666; }
+  header div.bit-3 { border: 0; position: absolute; width: inherit; }
+  header div.bit-3 nav { padding: 0; background: transparent; }
+  .toggle { z-index: 3; display: block; cursor: pointer; -webkit-touch-callout: none; -webkit-user-select: none; user-select: none; position: relative; background: transparent; }
+  .toggle:after { font-family: "FontAwesome"; content: "\f039"; right: 0; top: 0; position: absolute; padding: 1em; width: 44px; -webkit-transition: background 0.5s linear; transition: background 0.5s linear; }
+  .toggle:hover:after { background: #164666; color: white; }
   #toggle:checked + .toggle:after { font-family: "FontAwesome"; content: "\f00d"; }
   #toggle:checked ~ .top-nav { display: block; opacity: 1; -webkit-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; max-height: 900px; }
-  .top-nav { margin: 0; -webkit-transition: all 0.9s ease-in-out; transition: all 0.9s ease-in-out; /* rules below are necessary to navigataur, integrate in your .nav class */ opacity: 0; max-height: 0px; overflow: hidden; /* end .menu li */ /* highlight current page */ /* end current highlighters */ }
+  .top-nav { margin-top: 56px; /* original nav height */ -webkit-transition: all 0.9s ease-in-out; transition: all 0.9s ease-in-out; /* rules below are necessary to navigataur, integrate in your .nav class */ opacity: 0; max-height: 0px; overflow: hidden; margin-bottom: 0; /* end .menu li */ /* highlight current page */ /* end current highlighters */ }
   .top-nav li { /*
 so you really have to rethink your dropdowns for mobile.
 you don't want to have it expand too much because the
@@ -860,13 +862,13 @@ screen is so small. How you manage your menu should
 depend on the project. Here's some great info on it:
 http://www.alistapart.com/articles/organizing-mobile/
 */ }
-  .top-nav li a { display: block; text-decoration: none; padding: 5px 10px; border-top: 1px solid #eaedf2; /*
+  .top-nav li a { display: block; text-decoration: none; padding: 1em; background: white; /*
 remember this is for mobile ONLY, so there's no need
 to even declare hover styles here, you can do it in
 the style.scss file where it's relevant. We want to
 keep this file as small as possible!
 */ }
-  .top-nav li a:hover, .top-nav li a:focus { background-color: #eaedf2; }
+  .top-nav li a:hover, .top-nav li a:focus { background-color: #2980b9; color: white; }
   .top-nav li ul.sub-menu, .top-nav li ul.children { margin: 0; }
   .top-nav li ul.sub-menu li a, .top-nav li ul.children li a { padding-left: 30px; } }
 /*********************
